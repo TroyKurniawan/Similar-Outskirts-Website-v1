@@ -4,7 +4,18 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        fadeIn: 'fadeIn 100ms ease-in-out',
+      },
+
+      keyframes: theme => ({
+        fadeIn: {
+          '100%': { opacity: 1 },
+          '0%': { opacity: 0 },
+        },
+      })
+    },
   },
   plugins: [],
 }

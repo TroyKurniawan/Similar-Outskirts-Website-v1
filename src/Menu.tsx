@@ -4,24 +4,60 @@ import { ReactComponent as MenuBtn } from "./icons/google-menu.svg";
 const Menu = () => {
   const [open, setOpen] = useState(false);
 
+  //   Function to open/close menu
+  function menuOpen() {
+    if (open) {
+      document.getElementById("menu")?.classList.add("-translate-x-[28rem]");
+    } else {
+      document.getElementById("menu")?.classList.remove("-translate-x-[28rem]");
+    }
+    setOpen(!open);
+  }
+
+  //   ====================
+
   return (
-    <div className="h-screen absolute">
+    <div className="h-screen absolute text-white">
+      {/* Button SVG */}
       <MenuBtn
         onClick={() => {
-          setOpen(!open);
+          menuOpen();
         }}
         className="hover:cursor-pointer size-16 m-5 absolute z-10"
       />
 
-      {open && (
-        <div className="h-screen w-96 bg-slate-900 grid justify-center content-center animate-fadeIn">
-          <div className="text-4xl leading-loose">
-            <p>Home</p>
-            <p>About</p>
-            <p>Music</p>
-          </div>
+      {/* Menu */}
+      <div
+        id="menu"
+        className="h-screen w-[28rem] bg-black grid justify-center content-center animate-fadeOut backdrop-blur bg-opacity-50 -translate-x-[28rem] transition"
+      >
+        <div className="w-72 text-4xl leading-loose font-bold">
+          <p className="hover:text-blue-500 hover:translate-x-4 hover:cursor-pointer transition-all">
+            Home
+          </p>
+          <p className="hover:text-blue-500 hover:translate-x-4 hover:cursor-pointer transition-all">
+            About
+          </p>
+          <p className="hover:text-blue-500 hover:translate-x-4 hover:cursor-pointer transition-all">
+            Music
+          </p>
+          <p className="hover:text-blue-500 hover:translate-x-4 hover:cursor-pointer transition-all">
+            Live Sets
+          </p>
+          <p className="hover:text-blue-500 hover:translate-x-4 hover:cursor-pointer transition-all">
+            Art
+          </p>
+          <p className="hover:text-blue-500 hover:translate-x-4 hover:cursor-pointer transition-all">
+            Music Usage
+          </p>
+          <p className="hover:text-blue-500 hover:translate-x-4 hover:cursor-pointer transition-all">
+            Work Portfolio
+          </p>
+          <p className="hover:text-blue-500 hover:translate-x-4 hover:cursor-pointer transition-all">
+            Contact
+          </p>
         </div>
-      )}
+      </div>
     </div>
   );
 };

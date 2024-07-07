@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { ReactComponent as MenuBtn } from "./icons/google-menu.svg";
-import { ReactComponent as CloseBtn } from "./icons/google-close.svg";
+import MenuLinks from "./MenuLinks";
+import { ReactComponent as MenuBtn } from "../icons/google-menu.svg";
+import { ReactComponent as CloseBtn } from "../icons/google-close.svg";
 
 const Menu = () => {
   const [open, setOpen] = useState(false);
@@ -45,30 +46,9 @@ const Menu = () => {
         className="h-screen w-[28rem] bg-black grid justify-center content-center animate-fadeOut backdrop-blur bg-opacity-50 -translate-x-[28rem] transition"
       >
         <div className="w-72 text-4xl leading-loose font-bold">
-          <p className="hover:text-blue-500 hover:translate-x-4 hover:cursor-pointer transition-all">
-            Home
-          </p>
-          <p className="hover:text-blue-500 hover:translate-x-4 hover:cursor-pointer transition-all">
-            About
-          </p>
-          <p className="hover:text-blue-500 hover:translate-x-4 hover:cursor-pointer transition-all">
-            Music
-          </p>
-          <p className="hover:text-blue-500 hover:translate-x-4 hover:cursor-pointer transition-all">
-            Live Sets
-          </p>
-          <p className="hover:text-blue-500 hover:translate-x-4 hover:cursor-pointer transition-all">
-            Art
-          </p>
-          <p className="hover:text-blue-500 hover:translate-x-4 hover:cursor-pointer transition-all">
-            Music Usage
-          </p>
-          <p className="hover:text-blue-500 hover:translate-x-4 hover:cursor-pointer transition-all">
-            Work Portfolio
-          </p>
-          <p className="hover:text-blue-500 hover:translate-x-4 hover:cursor-pointer transition-all">
-            Contact
-          </p>
+          <MenuLinks title="Home" link="/home" />
+          <MenuLinks title="About" link="/about" />
+          <MenuLinks title="Contact" link="/contact" />
         </div>
       </div>
     </div>

@@ -14,7 +14,12 @@ module.exports = {
           '100%': { opacity: 1 },
           '0%': { opacity: 0 },
         },
-      })
+      }),
+
+      backgroundImage:
+      {
+        'show': "url('./images/show.jpg')"
+      }
     },
   },
   plugins: [],

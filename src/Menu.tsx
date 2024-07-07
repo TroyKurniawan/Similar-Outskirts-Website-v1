@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import { ReactComponent as MenuBtn } from "./icons/google-menu.svg";
+import { ReactComponent as CloseBtn } from "./icons/google-close.svg";
 
 const Menu = () => {
   const [open, setOpen] = useState(false);
 
   //   Function to open/close menu
   function menuOpen() {
-    if (open) {
+    // If open, close
+    if (open)
       document.getElementById("menu")?.classList.add("-translate-x-[28rem]");
-    } else {
+    // If closed, open
+    else
       document.getElementById("menu")?.classList.remove("-translate-x-[28rem]");
-    }
     setOpen(!open);
   }
 
@@ -18,13 +20,24 @@ const Menu = () => {
 
   return (
     <div className="h-screen absolute text-white">
-      {/* Button SVG */}
-      <MenuBtn
-        onClick={() => {
-          menuOpen();
-        }}
-        className="hover:cursor-pointer size-16 m-5 absolute z-10"
-      />
+      {/* Menu Button SVG */}
+      {!open && (
+        <MenuBtn
+          onClick={() => {
+            menuOpen();
+          }}
+          className="hover:cursor-pointer size-16 m-5 absolute z-10"
+        />
+      )}
+      {/* Close Button SVG */}
+      {open && (
+        <CloseBtn
+          onClick={() => {
+            menuOpen();
+          }}
+          className="hover:cursor-pointer size-16 m-5 absolute z-10"
+        />
+      )}
 
       {/* Menu */}
       <div

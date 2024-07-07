@@ -1,7 +1,3 @@
-import React from "react";
-import Menu from "./Menu";
-import textlogo from "./images/so-text-logo.png";
-
 function App() {
   return (
     <div className="h-screen w-[84rem] flex justify-center content-center place-items-center text-white">

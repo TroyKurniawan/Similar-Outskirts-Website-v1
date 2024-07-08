@@ -6,16 +6,15 @@ import Footer from "../components/Footer";
 function About() {
   return (
     <div
-      className="w-screen h-screen
-                    grid place-items-center content-between
-                    bg-show bg-cover bg-center
-                    text-white"
+      className="w-screen
+                  grid place-items-center
+                  text-white"
     >
-      {/* <Menu /> */}
       <Header />
-      <div className="h-screen w-screen flex justify-center content-center place-items-center text-white animate-fadeInSlide">
+
+      <div className="my-12 w-[68rem] flex justify-center content-center place-items-center text-white animate-fadeInSlide">
         {/* Paragraph */}
-        <p className="w-[56rem] text-justify text-lg">
+        <p className=" text-justify text-lg">
           <h1
             className="text-7xl font-black w-fit pb-2 text-blue-500
                         border-b-8 border-blue-500"

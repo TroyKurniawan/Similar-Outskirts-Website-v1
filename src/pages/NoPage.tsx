@@ -12,7 +12,6 @@ function NoPage() {
                     bg-show bg-cover bg-center
                     text-white"
     >
-      {/* <Menu /> */}
       <Header />
 
       <div className="grid place-items-center">

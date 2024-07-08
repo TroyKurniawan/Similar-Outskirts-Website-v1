@@ -6,7 +6,7 @@ import NoPage from "./pages/NoPage";
 
 function App() {
   return (
-    <div className="overscroll-none overflow-x-clip">
+    <div className="overscroll-none overflow-x-clip bg-show bg-cover bg-center bg-fixed">
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />

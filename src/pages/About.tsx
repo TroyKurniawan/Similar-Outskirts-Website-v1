@@ -1,22 +1,21 @@
 import Menu from "../components/Menu";
 import Header from "../components/Header";
 import persona from "../images/so-persona.png";
+import Footer from "../components/Footer";
 
 function About() {
   return (
     <div
-      className="w-screen h-screen overscroll-none
-                  grid justify-center content-center
-                  bg-show bg-cover bg-center
-                  text-white"
+      className="w-screen h-screen
+                    grid place-items-center content-between
+                    bg-show bg-cover bg-center
+                    text-white"
     >
       {/* <Menu /> */}
       <Header />
       <div className="h-screen w-screen flex justify-center content-center place-items-center text-white animate-fadeInSlide">
-        {/* Titles */}
-
         {/* Paragraph */}
-        <p className="w-[48rem] text-justify text-lg">
+        <p className="w-[56rem] text-justify text-lg">
           <h1
             className="text-7xl font-black w-fit pb-2 text-blue-500
                         border-b-8 border-blue-500"
@@ -64,10 +63,12 @@ function About() {
         {/* Persona Image */}
         <img
           src={persona}
-          className="w-72 ml-10 animate-fadeInSlide"
+          className="w-64 ml-12 animate-fadeInSlide"
           alt="similar outskirts persona"
         />
       </div>
+
+      <Footer />
     </div>
   );
 }

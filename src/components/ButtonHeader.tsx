@@ -8,7 +8,7 @@ function ButtonHeader({ title, link }: ButtonProps) {
     <a
       href={link}
       className="py-4 px-2 mx-2
-                hover:text-blue-500 hover:border-blue-500 hover:border-b-4 transition-all
+                hover:text-blue-500 border-blue-500 hover:border-b-4 transition-all
                 flex
                 text-lg font-bold
                 group"

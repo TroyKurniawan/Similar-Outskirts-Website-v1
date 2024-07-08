@@ -13,8 +13,7 @@
 
 body {
   margin: 0;
-  font-family: 'Roboto'
-    sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -22,4 +21,26 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Scrollbar */
+
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  background: black;
+}
+
+/* Customize the scrollbar track*/
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Customize the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: rgb(36, 36, 36); 
+}
+
+/* Customize the scrollbar thumb on hover*/
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

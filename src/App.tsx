@@ -6,13 +6,13 @@ import NoPage from "./pages/NoPage";
 
 function App() {
   return (
-    <div className="overscroll-none">
+    <div className="overscroll-none overflow-x-clip">
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/About" element={<About />} />
-          <Route path="/Music" element={<Music />} />
+          {/* <Route path="/Music" element={<Music />} /> */}
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>

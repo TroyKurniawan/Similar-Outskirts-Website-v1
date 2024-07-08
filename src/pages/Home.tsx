@@ -7,17 +7,20 @@ function Home() {
   return (
     <div
       className="w-screen h-screen
-                    grid place-items-center content-center
+                    grid place-items-center content-between
                     bg-show bg-cover bg-center
                     text-white"
     >
       <Header />
+      <div className="h-16" />
 
-      <img
-        src={textlogo}
-        className="h-96 animate-fadeInSlide"
-        alt="similar outskirts text logo"
-      />
+      <div className="grid place-items-center">
+        <img
+          src={textlogo}
+          className="h-72 animate-fadeInSlide mb-12"
+          alt="similar outskirts text logo"
+        />
+      </div>
 
       <Footer />
     </div>

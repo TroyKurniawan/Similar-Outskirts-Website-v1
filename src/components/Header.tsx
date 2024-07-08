@@ -6,11 +6,11 @@ const Header = () => {
     <div
       className="w-screen fixed top-0 left-0
                 bg-black
-                flex place-items-center place-content-between px-2 h-16"
+                flex place-items-center place-content-between px-4 h-16"
     >
       {/* Logo */}
       <a href="/home">
-        <img src={logo} className="m-2 size-12" />
+        <img src={logo} className="w-10" />
       </a>
 
       <div className="flex h-16">

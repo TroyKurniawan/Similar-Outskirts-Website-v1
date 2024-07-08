@@ -2,12 +2,13 @@ import Menu from "../components/Menu";
 import Header from "../components/Header";
 import logo from "../images/so-logo.png";
 import ButtonMain from "../components/ButtonPrimary";
+import Footer from "../components/Footer";
 
 function NoPage() {
   return (
     <div
-      className="w-screen h-screen bg-slate-800
-                    grid justify-center content-center
+      className="w-screen h-screen
+                    grid place-items-center content-between
                     bg-show bg-cover bg-center
                     text-white"
     >
@@ -18,9 +19,9 @@ function NoPage() {
         <h1 className="text-7xl font-black">Error: Page Not Found</h1>
 
         <ButtonMain title="Return Home" link="/home" />
-
-        <img src={logo} className="h-24" alt="similar outskirts logo" />
       </div>
+
+      <Footer />
     </div>
   );
 }

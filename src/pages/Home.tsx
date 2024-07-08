@@ -1,20 +1,25 @@
 import Menu from "../components/Menu";
+import Header from "../components/Header";
 import textlogo from "../images/so-text-logo.png";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
     <div
       className="w-screen h-screen
-                    grid justify-center content-center
+                    grid place-items-center content-center
                     bg-show bg-cover bg-center
                     text-white"
     >
-      <Menu />
+      <Header />
+
       <img
         src={textlogo}
         className="h-96 animate-fadeInSlide"
         alt="similar outskirts text logo"
       />
+
+      <Footer />
     </div>
   );
 }

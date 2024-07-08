@@ -5,11 +5,11 @@ type ButtonProps = {
   link: string;
 };
 
-function ButtonMain({ title, link }: ButtonProps) {
+function ButtonPrimary({ title, link }: ButtonProps) {
   return (
     <a
       href={link}
-      className="py-5 px-8 m-8 bg-blue-500 rounded-full
+      className="my-8 py-5 pl-10 pr-8 bg-blue-500 rounded-full
                 hover:scale-95 hover:bg-white hover:text-blue-500 transition
                 flex
                 text-2xl font-bold
@@ -21,4 +21,4 @@ function ButtonMain({ title, link }: ButtonProps) {
   );
 }
 
-export default ButtonMain;
+export default ButtonPrimary;

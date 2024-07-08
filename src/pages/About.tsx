@@ -1,4 +1,5 @@
 import Menu from "../components/Menu";
+import Header from "../components/Header";
 import persona from "../images/so-persona.png";
 
 function About() {
@@ -9,7 +10,8 @@ function About() {
                   bg-show bg-cover bg-center
                   text-white"
     >
-      <Menu />
+      {/* <Menu /> */}
+      <Header />
       <div className="h-screen w-screen flex justify-center content-center place-items-center text-white animate-fadeInSlide">
         {/* Titles */}
 

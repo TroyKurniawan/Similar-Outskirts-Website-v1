@@ -12,7 +12,7 @@ function About() {
     >
       <Header />
 
-      <div className="my-12 w-[68rem] flex justify-center content-center place-items-center text-white animate-fadeInSlide">
+      <div className="my-12 w-[64rem] flex justify-center content-center place-items-center text-white animate-fadeInSlide">
         {/* Paragraph */}
         <p className=" text-justify text-lg">
           <h1

@@ -1,7 +1,5 @@
-import Menu from "../components/Menu";
 import Header from "../components/Header";
-import logo from "../images/so-logo.png";
-import ButtonMain from "../components/ButtonPrimary";
+import ButtonPrimary from "../components/ButtonPrimary";
 import Footer from "../components/Footer";
 
 function NoPage() {
@@ -17,7 +15,7 @@ function NoPage() {
       <div className="grid place-items-center">
         <h1 className="text-7xl font-black">Error: Page Not Found</h1>
 
-        <ButtonMain title="Return Home" link="/home" />
+        <ButtonPrimary title="Return Home" link="/home" />
       </div>
 
       <Footer />

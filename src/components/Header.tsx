@@ -1,12 +1,11 @@
 import logo from "../images/so-logo.png";
 import ButtonHeader from "./ButtonHeader";
 
-const Header = () => {
+const Header2 = () => {
   return (
     <div
       className="w-screen fixed top-0 left-0
-                bg-black
-                flex place-items-center place-content-between px-4 h-16"
+                flex place-items-center place-content-between px-8 my-4 h-16"
     >
       {/* Logo */}
       <a href="/home">
@@ -26,4 +25,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header2;

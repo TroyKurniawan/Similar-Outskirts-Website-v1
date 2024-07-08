@@ -42,5 +42,5 @@ code {
 
 /* Customize the scrollbar thumb on hover*/
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #404040;
 }

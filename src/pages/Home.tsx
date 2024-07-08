@@ -11,6 +11,7 @@ function Home() {
                     bg-show bg-cover bg-center
                     text-white"
     >
+      {/* <Header /> */}
       <Header />
       <div className="h-16" />
 

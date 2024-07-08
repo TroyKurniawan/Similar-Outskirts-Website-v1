@@ -1,16 +1,26 @@
 import Menu from "../components/Menu";
+import persona from "../images/so-persona.png";
 
 function About() {
   return (
     <div
-      className="w-screen h-screen
+      className="w-screen h-screen overscroll-none
                   grid justify-center content-center
                   bg-show bg-cover bg-center
                   text-white"
     >
       <Menu />
-      <div className="h-screen w-[84rem] flex justify-center content-center place-items-center text-white">
+      <div className="h-screen w-screen flex justify-center content-center place-items-center text-white animate-fadeInSlide">
+        {/* Titles */}
+
+        {/* Paragraph */}
         <p className="w-[48rem] text-justify text-lg">
+          <h1
+            className="text-7xl font-black w-fit pb-2 text-blue-500
+                        border-b-8 border-blue-500"
+          >
+            About
+          </h1>
           <div className="my-5">
             Troy Kurniawan (pka. Similar Outskirts) is an Indonesian-American
             bass music artist from the Bay Area, California. His passion for
@@ -48,6 +58,13 @@ function About() {
             Eve (Jujutsu Kaisen, Dororo).
           </div>
         </p>
+
+        {/* Persona Image */}
+        <img
+          src={persona}
+          className="w-72 ml-10 animate-fadeInSlide"
+          alt="similar outskirts persona"
+        />
       </div>
     </div>
   );

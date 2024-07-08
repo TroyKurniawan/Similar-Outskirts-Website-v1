@@ -9,11 +9,13 @@ const Menu = () => {
   //   Function to open/close menu
   function menuOpen() {
     // If open, close
-    if (open)
+    if (open) {
       document.getElementById("menu")?.classList.add("-translate-x-[28rem]");
+    }
     // If closed, open
-    else
+    else {
       document.getElementById("menu")?.classList.remove("-translate-x-[28rem]");
+    }
     setOpen(!open);
   }
 
@@ -27,7 +29,7 @@ const Menu = () => {
           onClick={() => {
             menuOpen();
           }}
-          className="hover:cursor-pointer size-16 m-5 absolute z-10"
+          className="hover:cursor-pointer size-16 m-5 absolute z-50"
         />
       )}
       {/* Close Button SVG */}
@@ -36,18 +38,19 @@ const Menu = () => {
           onClick={() => {
             menuOpen();
           }}
-          className="hover:cursor-pointer size-16 m-5 absolute z-10"
+          className="hover:cursor-pointer size-16 m-5 absolute z-50"
         />
       )}
 
       {/* Menu */}
       <div
         id="menu"
-        className="h-screen w-[28rem] bg-black grid justify-center content-center animate-fadeOut backdrop-blur bg-opacity-50 -translate-x-[28rem] transition"
+        className="h-screen w-[28rem] bg-black grid justify-center content-center backdrop-blur bg-opacity-50 -translate-x-[28rem] transition z-40"
       >
-        <div className="w-72 text-4xl leading-loose font-bold">
+        <div className="w-72 text-4xl font-bold">
           <MenuLinks title="Home" link="/home" />
           <MenuLinks title="About" link="/about" />
+          <MenuLinks title="Music" link="/music" />
           <MenuLinks title="Contact" link="/contact" />
         </div>
       </div>

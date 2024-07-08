@@ -10,7 +10,11 @@ function Home() {
                     text-white"
     >
       <Menu />
-      <img src={textlogo} className="h-96" alt="similar outskirts text logo" />
+      <img
+        src={textlogo}
+        className="h-96 animate-fadeInSlide"
+        alt="similar outskirts text logo"
+      />
     </div>
   );
 }

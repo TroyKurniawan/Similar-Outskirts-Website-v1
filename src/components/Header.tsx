@@ -33,7 +33,7 @@ const Header2 = () => {
       >
         {/* Logo */}
         <a href="/home">
-          <img src={logo} className="w-10" />
+          <img src={logo} alt="similar outskirts logo" className="w-10" />
         </a>
 
         {/* Buttons */}

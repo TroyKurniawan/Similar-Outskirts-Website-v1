@@ -28,10 +28,15 @@ const ToggleSwitch = ({
     >
       {/* Label = Clickable Area */}
       <label
-        className="w-full p-2 place-content-between flex cursor-pointer items-center
+        className="w-80 h-10 p-2 place-content-between flex cursor-pointer items-center
                   hover:bg-slate-800"
       >
-        <img src={icon} alt="toggle switch icon" className="size-7 mr-3" />
+        {/* Icon */}
+        {icon ? (
+          <img src={icon} alt="toggle switch icon" className="size-7 mr-3" />
+        ) : (
+          <div />
+        )}
 
         {/* Title/Subtitle */}
         <div className="text-start w-32 md:w-48">

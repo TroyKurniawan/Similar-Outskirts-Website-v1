@@ -1,17 +1,18 @@
 import { useState } from "react";
 import { ReactComponent as Search } from "../icons/google-search.svg";
+import { ReactComponent as Note } from "../icons/google-music.svg";
 import ToggleSwitch from "./ToggleSwitch";
 import Person from "../icons/google-person.svg";
 import Construction from "../icons/google-construction.svg";
 import Groups from "../icons/google-groups.svg";
-import { ReactComponent as Note } from "../icons/google-music.svg";
 
 function SearchFilter() {
   const [test, setTest] = useState(false);
+  const year: number = new Date().getFullYear();
 
   return (
     <div
-      className="w-96 h-[44rem] mx-4 p-4 rounded-xl
+      className="w-96 h-[44rem] mx-4 p-4
                   border-4 border-slate-800 bg-slate-900 bg-opacity-50 backdrop-blur
                   animate-fadeInSlide
                   overflow-y-scroll"
@@ -78,7 +79,7 @@ function SearchFilter() {
           className="bg-slate-800 w-36 h-8 text-center"
           placeholder="Upper Year"
           type="number"
-          defaultValue={2024}
+          defaultValue={year}
         />
       </div>
 
@@ -152,10 +153,10 @@ function SearchFilter() {
       <div className="">
         <ToggleSwitch
           callback={setTest}
-          title="Self-Release"
+          title="Independent Release"
           subtitle=""
           init={true}
-          icon={Person}
+          icon=""
           enable={true}
         />
         <ToggleSwitch
@@ -163,15 +164,15 @@ function SearchFilter() {
           title="Rushdown"
           subtitle=""
           init={true}
-          icon={Construction}
+          icon=""
           enable={true}
         />
         <ToggleSwitch
           callback={setTest}
-          title="FIXT"
+          title="FiXT"
           subtitle=""
           init={true}
-          icon={Groups}
+          icon=""
           enable={true}
         />
         <ToggleSwitch
@@ -179,7 +180,7 @@ function SearchFilter() {
           title="Proximity"
           subtitle=""
           init={true}
-          icon={Groups}
+          icon=""
           enable={true}
         />
         <ToggleSwitch
@@ -187,7 +188,31 @@ function SearchFilter() {
           title="Disciple"
           subtitle=""
           init={true}
-          icon={Groups}
+          icon=""
+          enable={true}
+        />
+        <ToggleSwitch
+          callback={setTest}
+          title="FORM"
+          subtitle=""
+          init={true}
+          icon=""
+          enable={true}
+        />
+        <ToggleSwitch
+          callback={setTest}
+          title="Umbra Collective"
+          subtitle=""
+          init={true}
+          icon=""
+          enable={true}
+        />
+        <ToggleSwitch
+          callback={setTest}
+          title="Hot Panda Media"
+          subtitle=""
+          init={true}
+          icon=""
           enable={true}
         />
       </div>

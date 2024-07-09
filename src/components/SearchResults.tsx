@@ -1,7 +1,7 @@
 function SearchResults() {
   return (
     <div
-      className="w-[72rem] h-[44rem] mx-4 p-4 rounded-xl
+      className="w-[72rem] h-[44rem] mx-4 p-4
                   border-4 border-slate-800 bg-slate-900 bg-opacity-50 backdrop-blur
                   grid justify-center content-center
                   animate-fadeInSlide"

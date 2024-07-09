@@ -1,9 +1,22 @@
+import Menu from "./Menu";
 import logo from "../images/so-logo.png";
 import ButtonHeader from "./ButtonHeader";
 
 const Header2 = () => {
   document.addEventListener("scroll", bgColor);
 
+  // Find width of current window
+  // let windowLarge: boolean = false;
+  // window.addEventListener(
+  //   "resize",
+  //   function (event) {
+  //     if (window.innerWidth >= 1024) windowLarge = true;
+  //     else windowLarge = false;
+  //   },
+  //   true
+  // );
+
+  // If the user is not at the top of the page, add a black background to the header
   function bgColor() {
     if (window.scrollY !== 0)
       document.getElementById("header")?.classList.add("bg-black");
@@ -33,6 +46,10 @@ const Header2 = () => {
           <ButtonHeader title="Music Usage" link="/music-usage" />
           <ButtonHeader title="Work Portfolio" link="/work-portfolio" />
         </div>
+      </div>
+
+      <div className="hidden">
+        <Menu />
       </div>
 
       {/* Extra div for spacing */}

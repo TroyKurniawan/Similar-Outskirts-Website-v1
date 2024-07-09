@@ -12,6 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overscroll-behavior: none;
+  overflow: overlay;
 }
 
 code {
@@ -21,20 +22,28 @@ code {
 
 /* Customize the scrollbar */
 ::-webkit-scrollbar {
-  background: black;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
 }
 
 /* Customize the scrollbar track*/
 ::-webkit-scrollbar-track {
-  background: black;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
 }
 
 /* Customize the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
   background: rgb(36, 36, 36); 
+  border-radius: 5px;
 }
 
 /* Customize the scrollbar thumb on hover*/
 ::-webkit-scrollbar-thumb:hover {
   background: #404040;
+}
+
+:root {
+  --toggle-width: 50px;
+  --toggle-height: calc(var(--toggle-width)/2);
 }

@@ -1,3 +1,4 @@
+import Menu from "../components/Menu";
 import Header from "../components/Header";
 import textlogo from "../images/so-text-logo.png";
 import Footer from "../components/Footer";
@@ -9,13 +10,13 @@ function Home() {
                     grid place-items-center content-between
                     text-white"
     >
-      {/* <Header /> */}
       <Header />
 
       <img
         id="logo"
         src={textlogo}
-        className="h-72 animate-fadeInSlide mb-12 transition-all"
+        className="h-32 animate-fadeInSlide mb-12 transition-all
+                    md:h-72"
         alt="similar outskirts text logo"
       />
 

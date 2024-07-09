@@ -25,11 +25,6 @@ module.exports = {
       {
         'show': "url('./images/show.jpg')"
       },
-
-      boxShadow:
-      {
-        'blue': '5px 5px rgba(59, 130, 246)',
-      }
     },
   },
   plugins: [],

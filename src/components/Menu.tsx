@@ -10,11 +10,11 @@ const Menu = () => {
   function menuOpen() {
     // If open, close
     if (open) {
-      document.getElementById("menu")?.classList.add("-translate-x-[28rem]");
+      document.getElementById("menu")?.classList.remove("-translate-x-64");
     }
     // If closed, open
     else {
-      document.getElementById("menu")?.classList.remove("-translate-x-[28rem]");
+      document.getElementById("menu")?.classList.add("-translate-x-64");
     }
     setOpen(!open);
   }
@@ -22,14 +22,14 @@ const Menu = () => {
   //   ====================
 
   return (
-    <div className="h-screen absolute text-white">
+    <div className="h-screen absolute">
       {/* Menu Button SVG */}
       {!open && (
         <MenuBtn
           onClick={() => {
             menuOpen();
           }}
-          className="hover:cursor-pointer size-16 m-5 absolute z-50"
+          className="hover:cursor-pointer size-10 m-3 absolute z-50"
         />
       )}
       {/* Close Button SVG */}
@@ -38,14 +38,14 @@ const Menu = () => {
           onClick={() => {
             menuOpen();
           }}
-          className="hover:cursor-pointer size-16 m-5 absolute z-50"
+          className="hover:cursor-pointer size-10 m-3 absolute z-50"
         />
       )}
 
       {/* Menu */}
-      <div
+      {/* <div
         id="menu"
-        className="h-screen w-[28rem] bg-black grid justify-center content-center backdrop-blur bg-opacity-50 -translate-x-[28rem] transition z-40"
+        className="h-screen w-[28rem] bg-black grid justify-center content-center backdrop-blur bg-opacity-50 translate-x-20 transition z-40"
       >
         <div className="w-72 text-4xl font-bold">
           <MenuLinks title="Home" link="/home" />
@@ -53,7 +53,7 @@ const Menu = () => {
           <MenuLinks title="Music" link="/music" />
           <MenuLinks title="Contact" link="/contact" />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -3,13 +3,19 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Music from "./pages/Music";
 import NoPage from "./pages/NoPage";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="overflow-x-clip scroll">
+    <div className="overflow-x-clip text-white relative grid content-center">
       {/* Background */}
       <div className="h-screen w-screen bg-show bg-cover bg-no-repeat  bg-fixed fixed -z-10 bg-center" />
 
+      {/* Header */}
+      <Header />
+
+      {/* Page Routing */}
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
@@ -19,6 +25,8 @@ function App() {
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>
+
+      <Footer />
     </div>
   );
 }

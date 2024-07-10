@@ -14,8 +14,7 @@ function SearchFilter() {
     <div
       className="w-96 h-[44rem] mx-4 p-4
                   border-4 border-slate-800 bg-slate-900 bg-opacity-50 backdrop-blur
-                  animate-fadeInSlide
-                  overflow-y-scroll"
+                  animate-fadeInSlide overflow-y-scroll"
     >
       <div className="flex place-items-center place-content-between">
         <h1 className="text-2xl font-black my-2">Filter by</h1>
@@ -45,7 +44,7 @@ function SearchFilter() {
 
       <h2 className="font-bold my-2">Tempo</h2>
 
-      <div className="flex place-content-between">
+      <div className="flex place-content-between place-items-center">
         <input
           className="bg-slate-800 w-36 h-8 text-center"
           placeholder="Lower BPM"
@@ -67,7 +66,7 @@ function SearchFilter() {
 
       <h2 className="font-bold my-2">Release Year</h2>
 
-      <div className="flex place-content-between">
+      <div className="flex place-content-between place-items-center">
         <input
           className="bg-slate-800 w-36 h-8 text-center"
           placeholder="Lower Year"
@@ -201,6 +200,14 @@ function SearchFilter() {
         />
         <ToggleSwitch
           callback={setTest}
+          title="Heaven Sent"
+          subtitle=""
+          init={true}
+          icon=""
+          enable={true}
+        />
+        <ToggleSwitch
+          callback={setTest}
           title="Umbra Collective"
           subtitle=""
           init={true}
@@ -217,7 +224,7 @@ function SearchFilter() {
         />
       </div>
 
-      <div className="w-full h-[2px] my-4 bg-slate-800" />
+      <div className="h-6" />
 
       {/* ======================================= */}
     </div>

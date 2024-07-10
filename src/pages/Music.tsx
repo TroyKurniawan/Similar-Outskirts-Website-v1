@@ -8,18 +8,14 @@ function Music() {
   return (
     <div
       className="w-screen h-screen
-                  grid justify-center place-items-center place-content-between
+                  grid justify-center content-center
                   bg-show bg-cover bg-center
                   text-white"
     >
-      <Header />
-
-      <div className="flex my-2">
+      <div className="flex">
         <SearchFilter />
         <SearchResults />
       </div>
-
-      <Footer />
     </div>
   );
 }

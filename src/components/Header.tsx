@@ -48,12 +48,12 @@ const Header2 = () => {
         </div>
       </div>
 
-      <div className="hidden">
+      {/* <div className="hidden">
         <Menu />
-      </div>
+      </div> */}
 
       {/* Extra div for spacing */}
-      <div className="h-16" />
+      {/* <div className="h-16" /> */}
     </>
   );
 };

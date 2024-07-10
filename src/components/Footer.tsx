@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div
-      className="w-screen h-16 bottom-0
+      className="w-screen h-16 bottom-0 absolute
                 bg-black
                 grid place-items-center"
     >

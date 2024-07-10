@@ -45,6 +45,7 @@ const Header2 = () => {
           <ButtonHeader title="Art" link="/art" />
           <ButtonHeader title="Music Usage" link="/music-usage" />
           <ButtonHeader title="Work Portfolio" link="/work-portfolio" />
+          <ButtonHeader title="Contact" link="/contact" />
         </div>
       </div>
 

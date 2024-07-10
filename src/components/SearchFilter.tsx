@@ -5,10 +5,10 @@ import ToggleSwitch from "./ToggleSwitch";
 import Person from "../icons/google-person.svg";
 import Construction from "../icons/google-construction.svg";
 import Groups from "../icons/google-groups.svg";
+import { currentYear } from "../App";
 
 function SearchFilter() {
   const [test, setTest] = useState(false);
-  const year: number = new Date().getFullYear();
 
   return (
     <div
@@ -78,7 +78,7 @@ function SearchFilter() {
           className="bg-slate-800 w-36 h-8 text-center"
           placeholder="Upper Year"
           type="number"
-          defaultValue={year}
+          defaultValue={currentYear}
         />
       </div>
 

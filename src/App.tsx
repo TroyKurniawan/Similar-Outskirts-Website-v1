@@ -5,6 +5,7 @@ import Music from "./pages/Music";
 import NoPage from "./pages/NoPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+export const currentYear: number = new Date().getFullYear();
 
 function App() {
   return (

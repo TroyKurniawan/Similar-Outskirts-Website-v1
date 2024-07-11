@@ -5,7 +5,19 @@ import Construction from "../../icons/google-construction.svg";
 import Groups from "../../icons/google-groups.svg";
 import { currentYear } from "../../App";
 
-function SearchFilter() {
+type SearchFilterProps = {
+  setKeyword: React.Dispatch<React.SetStateAction<string>>;
+  setTempo: React.Dispatch<React.SetStateAction<number[]>>;
+  setReleaseYear: React.Dispatch<React.SetStateAction<number[]>>;
+  setKeysig: React.Dispatch<React.SetStateAction<string>>;
+};
+
+function SearchFilter({
+  setKeyword,
+  setTempo,
+  setReleaseYear,
+  setKeysig,
+}: SearchFilterProps) {
   const [test, setTest] = useState(false);
 
   return (
@@ -23,7 +35,7 @@ function SearchFilter() {
 
       {/* ======================================= */}
 
-      <h2 className="font-bold my-2">Name</h2>
+      <h2 className="font-bold my-2">Keyword</h2>
 
       <div className="my-2 flex">
         <div className="absolute m-1 pl-1 scale-90">
@@ -38,9 +50,16 @@ function SearchFilter() {
           </svg>
         </div>
         <input
+          id="keyword-input"
           className="bg-slate-800 w-full pl-10 pr-2 h-8"
           placeholder="Song title, artist name, etc..."
           type="search"
+          onChange={() =>
+            setKeyword(
+              (document.getElementById("keyword-input") as HTMLInputElement)!
+                .value
+            )
+          }
         />
       </div>
 

@@ -1,8 +1,15 @@
-import Menu from "../components/menu/Menu";
+import { useState } from "react";
 import SearchFilter from "../components/music/SearchFilter";
 import SearchResults from "../components/music/SearchResults";
+import { currentYear } from "../App";
 
 function Music() {
+  // States
+  const [keyword, setKeyword] = useState("");
+  const [tempo, setTempo] = useState([0, 1000]);
+  const [releaseYear, setReleaseYear] = useState([2014, currentYear]);
+  const [keysig, setKeysig] = useState("-");
+
   return (
     <div
       className="w-screen h-screen
@@ -11,8 +18,13 @@ function Music() {
                   text-white"
     >
       <div className="flex">
-        <SearchFilter />
-        <SearchResults />
+        <SearchFilter
+          setKeyword={setKeyword}
+          setTempo={setTempo}
+          setReleaseYear={setReleaseYear}
+          setKeysig={setKeysig}
+        />
+        <SearchResults keyword={keyword} />
       </div>
     </div>
   );

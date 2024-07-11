@@ -6,11 +6,11 @@ import Footer from "../components/Footer";
 function About() {
   return (
     <div
-      className="w-screen
+      className="w-screen h-screen
                   grid place-items-center
                   text-white"
     >
-      <div className="my-12 p-8 w-96 md:w-[48rem] lg:w-[58rem] grid lg:flex justify-center content-center place-items-center text-white animate-fadeInSlide">
+      <div className="my-12 p-8 w-96 md:w-[48rem] lg:w-[64rem] grid lg:flex justify-center content-center place-items-center text-white animate-fadeInSlide">
         {/* Paragraph */}
         <p className=" text-justify">
           <h1

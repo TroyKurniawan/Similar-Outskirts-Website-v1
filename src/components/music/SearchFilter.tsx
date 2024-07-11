@@ -32,6 +32,18 @@ function SearchFilter({
     ]);
   }
 
+  // Format release year to send as state change
+  function formatReleaseYear() {
+    setReleaseYear([
+      parseInt(
+        (document.getElementById("lower-year") as HTMLInputElement)?.value
+      ),
+      parseInt(
+        (document.getElementById("upper-year") as HTMLInputElement)?.value
+      ),
+    ]);
+  }
+
   return (
     <div
       className="w-96 h-[44rem] mx-4 p-4
@@ -40,7 +52,7 @@ function SearchFilter({
     >
       <div className="flex place-items-center place-content-between">
         <h1 className="text-2xl font-black my-2">Filter by</h1>
-        <p className="text-sm text-gray-500">( Results: ### )</p>
+        <p className="text-sm text-gray-500">### results</p>
       </div>
 
       <div className="w-full h-[2px] my-4 bg-slate-800" />
@@ -136,18 +148,22 @@ function SearchFilter({
             </svg>
           </div>
           <input
+            id="lower-year"
             className="bg-slate-800 w-36 h-8 pl-4 text-center"
             placeholder="Lower Year"
             type="number"
             defaultValue={2014}
+            onChange={formatReleaseYear}
           />
         </div>
         <p>to</p>
         <input
+          id="upper-year"
           className="bg-slate-800 w-36 h-8 text-center"
           placeholder="Upper Year"
           type="number"
           defaultValue={currentYear}
+          onChange={formatReleaseYear}
         />
       </div>
 

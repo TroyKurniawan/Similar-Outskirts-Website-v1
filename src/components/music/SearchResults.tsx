@@ -20,9 +20,10 @@ type EntryProps = {
 type SearchResultsProps = {
   keyword: string;
   tempo: number[];
+  releaseYear: number[];
 };
 
-function SearchResults({ keyword, tempo }: SearchResultsProps) {
+function SearchResults({ keyword, tempo, releaseYear }: SearchResultsProps) {
   // Filter music entries
   function musicFilter(entry: EntryProps) {
     // Check keyword
@@ -33,6 +34,11 @@ function SearchResults({ keyword, tempo }: SearchResultsProps) {
       if (tempo[0] <= entry.tempo[i] && entry.tempo[i] <= tempo[1]) break;
       if (i == entry.tempo.length - 1) return null;
     }
+
+    // Check release year
+    let date_split: string[] = entry.release_date.split("-");
+    let year: number = parseInt(date_split[0]);
+    if (releaseYear[0] > year || year > releaseYear[1]) return null;
 
     // If all pass, render component
     return entry;

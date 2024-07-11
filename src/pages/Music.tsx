@@ -24,7 +24,11 @@ function Music() {
           setReleaseYear={setReleaseYear}
           setKeysig={setKeysig}
         />
-        <SearchResults keyword={keyword} tempo={tempo} />
+        <SearchResults
+          keyword={keyword}
+          tempo={tempo}
+          releaseYear={releaseYear}
+        />
       </div>
     </div>
   );

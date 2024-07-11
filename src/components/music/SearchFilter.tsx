@@ -18,7 +18,19 @@ function SearchFilter({
   setReleaseYear,
   setKeysig,
 }: SearchFilterProps) {
-  const [test, setTest] = useState(false);
+  const [test, setTest] = useState(true);
+
+  // Format tempo to send as state change
+  function formatTempo() {
+    setTempo([
+      parseInt(
+        (document.getElementById("lower-tempo") as HTMLInputElement)?.value
+      ),
+      parseInt(
+        (document.getElementById("upper-tempo") as HTMLInputElement)?.value
+      ),
+    ]);
+  }
 
   return (
     <div
@@ -70,6 +82,7 @@ function SearchFilter({
       <h2 className="font-bold my-2">Tempo</h2>
 
       <div className="flex place-content-between place-items-center">
+        {/* Lower */}
         <div className="flex">
           <div className="absolute m-1 pl-1 scale-90">
             <svg
@@ -83,18 +96,23 @@ function SearchFilter({
             </svg>
           </div>
           <input
+            id="lower-tempo"
             className="bg-slate-800 w-36 h-8 pl-4 text-center"
             placeholder="Lower BPM"
             type="number"
             defaultValue={90}
+            onChange={formatTempo}
           />
         </div>
         <p>to</p>
+        {/* Upper */}
         <input
+          id="upper-tempo"
           className="bg-slate-800 w-36 h-8 text-center"
           placeholder="Upper BPM"
           type="number"
           defaultValue={200}
+          onChange={formatTempo}
         />
       </div>
 

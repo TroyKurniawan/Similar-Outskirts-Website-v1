@@ -19,13 +19,22 @@ type EntryProps = {
 
 type SearchResultsProps = {
   keyword: string;
+  tempo: number[];
 };
 
-function SearchResults({ keyword }: SearchResultsProps) {
+function SearchResults({ keyword, tempo }: SearchResultsProps) {
   // Filter music entries
   function musicFilter(entry: EntryProps) {
     // Check keyword
     if (keyword && !entry.title.toLowerCase().includes(keyword)) return null;
+
+    // Check tempo
+    for (let i = 0; i < entry.tempo.length; i++) {
+      if (tempo[0] <= entry.tempo[i] && entry.tempo[i] <= tempo[1]) break;
+      if (i == entry.tempo.length - 1) return null;
+    }
+
+    // If all pass, render component
     return entry;
   }
 

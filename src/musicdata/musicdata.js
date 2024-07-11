@@ -211,21 +211,6 @@ export const MusicData = [
   },
   {
     "id": 15,
-    "title": "No Limits EP",
-    "subtitle": "",
-    "release_date": "2016-5-7",
-    "type": "ep",
-    "length": 0,
-    "keysig": ["-"],
-    "tempo": [0],
-    "label": "Independent",
-    "remix": false,
-    "collaboration": false,
-    "link": "https://soundcloud.com/similar-outskirts/sets/no-limits-ep-out-now",
-    "art": "https://f4.bcbits.com/img/a2071563971_10.jpg",
-  },
-  {
-    "id": 16,
     "title": "Choreography",
     "subtitle": "",
     "release_date": "2016-5-7",
@@ -240,7 +225,7 @@ export const MusicData = [
     "art": "https://f4.bcbits.com/img/a2071563971_10.jpg",
   },
   {
-    "id": 17,
+    "id": 16,
     "title": "Whiplash",
     "subtitle": "",
     "release_date": "2016-5-7",
@@ -255,7 +240,7 @@ export const MusicData = [
     "art": "https://f4.bcbits.com/img/a2071563971_10.jpg",
   },
   {
-    "id": 18,
+    "id": 17,
     "title": "Awake and Unafraid",
     "subtitle": "",
     "release_date": "2016-5-7",
@@ -270,7 +255,7 @@ export const MusicData = [
     "art": "https://f4.bcbits.com/img/a2071563971_10.jpg",
   },
   {
-    "id": 19,
+    "id": 18,
     "title": "Roller Coaster",
     "subtitle": "",
     "release_date": "2016-5-7",

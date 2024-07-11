@@ -23,7 +23,7 @@ with open(write_file, 'w', errors='ignore') as w_file:
             data = next(csvreader)
 
             # Stop if end of file
-            if data[0] == "END" or i == 20:
+            if data[0] == "END" or i == 19:
                 w_file.write("]")
                 break
 

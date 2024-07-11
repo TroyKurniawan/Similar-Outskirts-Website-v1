@@ -1,8 +1,6 @@
 import Menu from "../components/Menu";
 import SearchFilter from "../components/SearchFilter";
-import Header from "../components/Header";
 import SearchResults from "../components/SearchResults";
-import Footer from "../components/Footer";
 
 function Music() {
   return (

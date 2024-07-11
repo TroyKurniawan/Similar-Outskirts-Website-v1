@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import ButtonPrimary from "../components/ButtonPrimary";
+import ButtonPrimary from "../components/utilities/ButtonPrimary";
 import Footer from "../components/Footer";
 
 function NoPage() {

@@ -1,4 +1,4 @@
-import Menu from "../components/Menu";
+import Menu from "../components/menu/Menu";
 import Header from "../components/Header";
 import persona from "../images/so-persona.png";
 import Footer from "../components/Footer";

@@ -2,36 +2,24 @@ import { useState } from "react";
 import MusicEntryDetails from "./MusicEntryDetails";
 
 type MusicEntryProps = {
-  id: number;
-  title: string;
-  subtitle: string;
-  release_date: string;
-  type: string;
-  length: number;
-  keysig: string[];
-  tempo: number[];
-  label: string;
-  remix: boolean;
-  collaboration: boolean;
-  link: string;
-  art: string;
+  entry: {
+    id: number;
+    title: string;
+    subtitle: string;
+    release_date: string;
+    type: string;
+    length: number;
+    keysig: string[];
+    tempo: number[];
+    label: string;
+    remix: boolean;
+    collaboration: boolean;
+    link: string;
+    art: string;
+  };
 };
 
-function MusicEntry({
-  id,
-  title,
-  subtitle,
-  release_date,
-  type,
-  length,
-  keysig,
-  tempo,
-  label,
-  remix,
-  collaboration,
-  link,
-  art,
-}: MusicEntryProps) {
+function MusicEntry({ entry }: MusicEntryProps) {
   let months = [
     "January",
     "February",
@@ -48,7 +36,7 @@ function MusicEntry({
   ];
 
   // Format date
-  let date_split: string[] = release_date.split("-");
+  let date_split: string[] = entry.release_date.split("-");
   let year: string = date_split[0];
   let month: string = months[Number(date_split[1]) - 1];
   let date: string = date_split[2];
@@ -56,24 +44,24 @@ function MusicEntry({
 
   // Format length
   let length_string = "";
-  let min: number = Math.floor(length / 60);
-  let sec: number = length % 60;
+  let min: number = Math.floor(entry.length / 60);
+  let sec: number = entry.length % 60;
   if (sec < 10) length_string = min + ":0" + sec;
   else length_string = min + ":" + sec;
 
   // Format keysig
-  let keysig_string: string = keysig[0];
-  if (keysig.length > 1) {
-    for (let i = 1; i < keysig.length; i++) {
-      keysig_string += ", " + keysig[i];
+  let keysig_string: string = entry.keysig[0];
+  if (entry.keysig.length > 1) {
+    for (let i = 1; i < entry.keysig.length; i++) {
+      keysig_string += ", " + entry.keysig[i];
     }
   }
 
   // Format tempo
-  let tempo_string: string = tempo[0].toString();
-  if (tempo.length > 1) {
-    for (let i = 1; i < tempo.length; i++) {
-      tempo_string += ", " + tempo[i];
+  let tempo_string: string = entry.tempo[0].toString();
+  if (entry.tempo.length > 1) {
+    for (let i = 1; i < entry.tempo.length; i++) {
+      tempo_string += ", " + entry.tempo[i];
     }
   }
 
@@ -93,15 +81,15 @@ function MusicEntry({
           setOpenEntry(!openEntry);
         }}
       >
-        <p className="pr-4 text-gray-500 font-black">{id}</p>
+        <p className="pr-4 text-gray-500 font-black">{entry.id}</p>
 
         {/* Main Box */}
         <div className="w-4/5 h-36 pr-4 space-x-4 flex place-items-center">
-          <img src={art} className="h-full py-4" />
+          <img src={entry.art} className="h-full py-4" />
 
           <div>
-            <h1 className="text-4xl font-black">{title}</h1>
-            {subtitle && <h2 className="">({subtitle})</h2>}
+            <h1 className="text-4xl font-black">{entry.title}</h1>
+            {entry.subtitle && <h2 className="">({entry.subtitle})</h2>}
             <p className="text-gray-500 text-sm mt-2">{date_string}</p>
           </div>
         </div>

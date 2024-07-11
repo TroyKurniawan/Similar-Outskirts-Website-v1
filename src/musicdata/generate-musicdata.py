@@ -38,7 +38,7 @@ with open(write_file, 'w', errors='ignore') as w_file:
             # Write every data
             for j in range(len(data)):
                 # If at the key/tempo field, take into account if multiple values are given
-                if fields[j] == "key" or fields[j] == "tempo":
+                if fields[j] == "keysig" or fields[j] == "tempo":
 
                     # Split elements into a list
                     split = data[j].split(",")

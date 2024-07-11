@@ -1,4 +1,4 @@
-import Menu from "../components/Menu";
+import Menu from "../components/menu/Menu";
 import Header from "../components/Header";
 import textlogo from "../images/so-text-logo.png";
 import Footer from "../components/Footer";

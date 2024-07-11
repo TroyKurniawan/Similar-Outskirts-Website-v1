@@ -5,7 +5,7 @@ import am_icon from "../icons/social-am.png";
 import tw_icon from "../icons/social-tw.png";
 import ig_icon from "../icons/social-ig.png";
 import tt_icon from "../icons/social-tt.png";
-import SocialMediaButton from "./SocialMediaButton";
+import SocialMediaButton from "./utilities/SocialMediaButton";
 import { currentYear } from "../App";
 
 let sc_link = "https://soundcloud.com/similar-outskirts";

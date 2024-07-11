@@ -1,6 +1,6 @@
-import Menu from "../components/Menu";
-import SearchFilter from "../components/SearchFilter";
-import SearchResults from "../components/SearchResults";
+import Menu from "../components/menu/Menu";
+import SearchFilter from "../components/music/SearchFilter";
+import SearchResults from "../components/music/SearchResults";
 
 function Music() {
   return (

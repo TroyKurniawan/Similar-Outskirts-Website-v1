@@ -1,6 +1,6 @@
-import Menu from "./Menu";
+import Menu from "./menu/Menu";
 import logo from "../images/so-logo.png";
-import ButtonHeader from "./ButtonHeader";
+import ButtonHeader from "./utilities/ButtonHeader";
 
 const Header2 = () => {
   document.addEventListener("scroll", bgColor);

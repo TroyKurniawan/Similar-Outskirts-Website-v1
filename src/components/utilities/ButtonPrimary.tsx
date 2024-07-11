@@ -1,4 +1,4 @@
-import { ReactComponent as OutArrow } from "../icons/google-outbound.svg";
+import { ReactComponent as OutArrow } from "../../icons/google-outbound.svg";
 
 type ButtonProps = {
   title: string;

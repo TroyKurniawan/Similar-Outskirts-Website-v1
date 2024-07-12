@@ -147,7 +147,7 @@ function MusicEntry({ entry }: MusicEntryProps) {
           </div>
 
           {/* Label */}
-          <div className="flex w-32 space-x-2">
+          <div className="flex w-40 space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="17px"

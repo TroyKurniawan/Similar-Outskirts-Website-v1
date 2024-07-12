@@ -94,7 +94,7 @@ function MusicEntry({ entry }: MusicEntryProps) {
 
           <div>
             <h1 className="text-4xl font-black">{entry.title}</h1>
-            {entry.subtitle && <h2 className="">({entry.subtitle})</h2>}
+            {entry.subtitle && <h2>({entry.subtitle})</h2>}
             <p className="text-gray-500 text-sm mt-2">{date_string}</p>
           </div>
         </div>

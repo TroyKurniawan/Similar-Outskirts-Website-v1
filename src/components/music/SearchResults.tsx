@@ -23,7 +23,6 @@ type SearchResultsProps = {
   tempo: number[];
   releaseYear: number[];
   keysig: string;
-  setResultCount: React.Dispatch<React.SetStateAction<number>>;
 };
 
 function SearchResults({
@@ -31,11 +30,9 @@ function SearchResults({
   tempo,
   releaseYear,
   keysig,
-  setResultCount,
 }: SearchResultsProps) {
   // Count number of entries that are rendered
   let entryCount = MusicData.slice(0).filter(musicFilter).length;
-  setResultCount(entryCount);
 
   // Pages
   let pageCount = Math.ceil(entryCount / 20);
@@ -89,8 +86,12 @@ function SearchResults({
       <div
         className="w-[64rem] h-20 flex px-8
                    border-l-4 border-r-4 border-slate-800 bg-slate-900
-                   place-content-end place-items-center"
+                   place-content-between place-items-center"
       >
+        <p className="text-sm text-gray-500">
+          <b>RESULTS:</b> ( {pageRange[0] + 1} -{" "}
+          {Math.min(pageRange[1], entryCount)} of {entryCount} )
+        </p>
         {/* Pages */}
         <div className="flex space-x-2">
           {Array.from({ length: pageCount }, (_, index) => (

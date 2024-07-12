@@ -22,6 +22,7 @@ type SearchResultsProps = {
   tempo: number[];
   releaseYear: number[];
   keysig: string;
+  setResultCount: React.Dispatch<React.SetStateAction<number>>;
 };
 
 function SearchResults({
@@ -29,6 +30,7 @@ function SearchResults({
   tempo,
   releaseYear,
   keysig,
+  setResultCount,
 }: SearchResultsProps) {
   // Filter music entries
   function musicFilter(entry: EntryProps) {
@@ -57,6 +59,11 @@ function SearchResults({
     // If all pass, render component
     return entry;
   }
+
+  // Count number of entries that are rendered
+  setResultCount(MusicData.slice(0).filter(musicFilter).length);
+
+  // ===========================================
 
   return (
     <div

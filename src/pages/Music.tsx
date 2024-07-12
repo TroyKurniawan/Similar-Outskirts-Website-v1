@@ -9,6 +9,7 @@ function Music() {
   const [tempo, setTempo] = useState([0, 1000]);
   const [releaseYear, setReleaseYear] = useState([2014, currentYear]);
   const [keysig, setKeysig] = useState("-");
+  const [resultCount, setResultCount] = useState(0);
 
   return (
     <div
@@ -23,12 +24,14 @@ function Music() {
           setTempo={setTempo}
           setReleaseYear={setReleaseYear}
           setKeysig={setKeysig}
+          resultCount={resultCount}
         />
         <SearchResults
           keyword={keyword}
           tempo={tempo}
           releaseYear={releaseYear}
           keysig={keysig}
+          setResultCount={setResultCount}
         />
       </div>
     </div>

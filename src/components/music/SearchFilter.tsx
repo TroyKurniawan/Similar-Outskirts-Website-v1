@@ -10,6 +10,7 @@ type SearchFilterProps = {
   setTempo: React.Dispatch<React.SetStateAction<number[]>>;
   setReleaseYear: React.Dispatch<React.SetStateAction<number[]>>;
   setKeysig: React.Dispatch<React.SetStateAction<string>>;
+  resultCount: number;
 };
 
 function SearchFilter({
@@ -17,6 +18,7 @@ function SearchFilter({
   setTempo,
   setReleaseYear,
   setKeysig,
+  resultCount,
 }: SearchFilterProps) {
   const [test, setTest] = useState(true);
 
@@ -54,7 +56,7 @@ function SearchFilter({
     >
       <div className="flex place-items-center place-content-between">
         <h1 className="text-2xl font-black my-2">Filter by</h1>
-        <p className="text-sm text-gray-500">### results</p>
+        <p className="text-sm text-gray-500">{resultCount} result(s)</p>
       </div>
 
       <div className="w-full h-[2px] my-4 bg-slate-800" />

@@ -6,7 +6,6 @@ type EntryProps = {
   title: string;
   subtitle: string;
   release_date: string;
-  type: string;
   length: number;
   keysig: string[];
   tempo: number[];
@@ -61,14 +60,15 @@ function SearchResults({
   }
 
   // Count number of entries that are rendered
-  setResultCount(MusicData.slice(0).filter(musicFilter).length);
+  let count = MusicData.slice(0).filter(musicFilter).length;
+  setResultCount(count);
 
   // ===========================================
 
   return (
     <div
       className="w-[64rem] h-[44rem]
-                  border-4 border-slate-800 bg-slate-900
+                  border-4 border-slate-800 bg-slate-900 bg-opacity-50 backdrop-blur
                   grid justify-center place-content-start
                   overflow-y-scroll overflow-x-hidden
                   animate-fadeInSlide"
@@ -79,7 +79,6 @@ function SearchResults({
         .map((entry) => (
           <MusicEntry entry={entry} />
         ))}
-      {/* <p className="font-bold text-xl">No results found.</p> */}
     </div>
   );
 }

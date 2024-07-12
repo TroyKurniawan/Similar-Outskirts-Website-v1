@@ -63,7 +63,7 @@ function SearchFilter({
 
       {/* ======================================= */}
 
-      <h2 className="font-bold my-2">Keyword</h2>
+      <h2 className="font-bold my-2">Title</h2>
 
       <div className="my-2 flex">
         <div className="absolute m-1 pl-1 scale-90">
@@ -80,7 +80,7 @@ function SearchFilter({
         <input
           id="keyword-input"
           className="bg-slate-800 w-full pl-10 pr-2 h-8"
-          placeholder="Song title, artist name, etc..."
+          placeholder="Search..."
           type="search"
           onChange={() =>
             setKeyword(

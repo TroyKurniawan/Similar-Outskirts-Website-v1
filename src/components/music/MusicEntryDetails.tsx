@@ -1,10 +1,12 @@
 function MusicEntryDetails() {
   return (
     <div
-      className="w-[64rem] h-96 pl-6 pr-8 py-4
+      className="w-[64rem] h-36 
                     bg-slate-950
-                  flex place-items-center transition-all"
-    ></div>
+                  flex place-items-center"
+    >
+      Hello
+    </div>
   );
 }
 

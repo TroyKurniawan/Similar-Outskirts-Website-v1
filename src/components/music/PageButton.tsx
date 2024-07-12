@@ -5,6 +5,7 @@ type PageButtonProps = {
   pageNumber: number;
   pageCurrent: number;
   setPageCurrent: React.Dispatch<React.SetStateAction<number>>;
+  itemsPerPage: number;
 };
 
 function PageButton({
@@ -12,11 +13,12 @@ function PageButton({
   pageNumber,
   pageCurrent,
   setPageCurrent,
+  itemsPerPage,
 }: PageButtonProps) {
   // Calculate the page to change to
   function pagesFilter() {
-    let index0: number = (pageNumber - 1) * 20;
-    let index1: number = index0 + 20;
+    let index0: number = (pageNumber - 1) * itemsPerPage;
+    let index1: number = index0 + itemsPerPage;
     setPageRange([index0, index1]);
     setPageCurrent(pageNumber);
   }

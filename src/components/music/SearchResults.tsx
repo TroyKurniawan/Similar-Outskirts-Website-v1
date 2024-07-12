@@ -35,8 +35,9 @@ function SearchResults({
   let entryCount = MusicData.slice(0).filter(musicFilter).length;
 
   // Pages
-  let pageCount = Math.ceil(entryCount / 20);
-  const [pageRange, setPageRange] = useState([0, 20]);
+  const [itemsPerPage, setItemsPerPage] = useState(20);
+  let pageCount = Math.ceil(entryCount / itemsPerPage);
+  const [pageRange, setPageRange] = useState([0, itemsPerPage]);
   const [pageCurrent, setPageCurrent] = useState(1);
 
   // Filter music entries
@@ -69,7 +70,7 @@ function SearchResults({
 
   // Every time a filter is changed, set the page back to 1
   useEffect(() => {
-    setPageRange([0, 20]);
+    setPageRange([0, itemsPerPage]);
     setPageCurrent(1);
   }, [keyword, tempo, releaseYear, keysig]);
 
@@ -161,6 +162,7 @@ function SearchResults({
                 pageNumber={index + 1}
                 pageCurrent={pageCurrent}
                 setPageCurrent={setPageCurrent}
+                itemsPerPage={itemsPerPage}
               />
             ))}
           </div>

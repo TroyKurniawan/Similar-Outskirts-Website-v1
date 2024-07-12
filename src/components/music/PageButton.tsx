@@ -32,7 +32,7 @@ function PageButton({
   return (
     <div
       id={pageButtonID}
-      className="size-10 border-2 border-slate-800 text-center place-content-center text-gray-500 cursor-pointer
+      className="size-8 border-2 border-slate-800 text-center place-content-center text-gray-500 cursor-pointer
                 hover:bg-slate-800"
       onClick={pagesFilter}
     >

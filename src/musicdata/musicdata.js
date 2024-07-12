@@ -11,7 +11,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/similar-outskirts-technology",
-    "art": "https://f4.bcbits.com/img/a2602584825_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000201064877-ma7nd4-t200x200.jpg",
   },
   {
     "id": 2,
@@ -25,7 +25,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/sub-sound-feel-the-buzz",
-    "art": "https://i1.sndcdn.com/artworks-000201108064-pbjh4c-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000201108064-pbjh4c-t200x200.jpg",
   },
   {
     "id": 3,
@@ -39,7 +39,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/similar-outskirts-cyborg",
-    "art": "https://f4.bcbits.com/img/a1515047272_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000201108179-trs4dq-t200x200.jpg",
   },
   {
     "id": 4,
@@ -53,7 +53,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/similar-outskirts-boom-the",
-    "art": "https://f4.bcbits.com/img/a2416192760_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000201108332-a1a4c1-t200x200.jpg",
   },
   {
     "id": 5,
@@ -67,7 +67,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/similar-outskirts-snowball-fight",
-    "art": "https://f4.bcbits.com/img/a3465120814_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000201108469-ewix52-t200x200.jpg",
   },
   {
     "id": 6,
@@ -81,7 +81,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/similar-outskirts-jubilant",
-    "art": "https://f4.bcbits.com/img/a2758000269_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000201108577-7ke5xc-t200x200.jpg",
   },
   {
     "id": 7,
@@ -95,7 +95,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/laszlo-interstellar-similar",
-    "art": "https://i1.sndcdn.com/artworks-000201108680-1972jr-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000201108680-1972jr-t200x200.jpg",
   },
   {
     "id": 8,
@@ -109,7 +109,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/similar-outskirts-radiation",
-    "art": "https://f4.bcbits.com/img/a4080141869_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000201108735-zomr6p-t200x200.jpg",
   },
   {
     "id": 9,
@@ -123,7 +123,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/vau-boy-when-you-sleep-2014-ft",
-    "art": "https://i1.sndcdn.com/artworks-000201108789-sbmywn-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000201108789-sbmywn-t200x200.jpg",
   },
   {
     "id": 10,
@@ -137,7 +137,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/im-here-remix",
-    "art": "https://i1.sndcdn.com/artworks-000201108920-ha9ybf-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000201108920-ha9ybf-t200x200.jpg",
   },
   {
     "id": 11,
@@ -151,7 +151,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/getsix-the-time-traveller-similar-outskirts-remix",
-    "art": "https://i1.sndcdn.com/artworks-000201109218-vmy3sr-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000201109218-vmy3sr-t200x200.jpg",
   },
   {
     "id": 12,
@@ -165,7 +165,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/epiphany",
-    "art": "https://f4.bcbits.com/img/a4246737652_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000201109282-2dk1fu-t200x200.jpg",
   },
   {
     "id": 13,
@@ -179,7 +179,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/senses-overload-remix",
-    "art": "https://i1.sndcdn.com/artworks-000201109366-dwo6l9-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000201109366-dwo6l9-t200x200.jpg",
   },
   {
     "id": 14,
@@ -193,7 +193,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/blast-off",
-    "art": "https://f4.bcbits.com/img/a0732027681_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000201109403-15wjb7-t200x200.jpg",
   },
   {
     "id": 15,
@@ -207,7 +207,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://soundcloud.com/dreamscape_records/similar-outskirts-choreography-1",
-    "art": "https://f4.bcbits.com/img/a2071563971_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-r9HgdKj4YNjUuUwy-GZUvFQ-t200x200.jpg",
   },
   {
     "id": 16,
@@ -221,7 +221,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://soundcloud.com/dreamscape_records/similar-outskirts-whiplash-1",
-    "art": "https://f4.bcbits.com/img/a2071563971_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-r9HgdKj4YNjUuUwy-GZUvFQ-t200x200.jpg",
   },
   {
     "id": 17,
@@ -235,7 +235,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://soundcloud.com/dreamscape_records/similar-outskirts-awake-and-unafraid",
-    "art": "https://f4.bcbits.com/img/a2071563971_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-r9HgdKj4YNjUuUwy-GZUvFQ-t200x200.jpg",
   },
   {
     "id": 18,
@@ -249,7 +249,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://soundcloud.com/dreamscape_records/similar-outskirts-roller-coaster",
-    "art": "https://f4.bcbits.com/img/a2071563971_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-r9HgdKj4YNjUuUwy-GZUvFQ-t200x200.jpg",
   },
   {
     "id": 19,
@@ -263,7 +263,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/apollo-remix",
-    "art": "https://i1.sndcdn.com/artworks-000201109476-uls3g6-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000201109476-uls3g6-t200x200.jpg",
   },
   {
     "id": 20,
@@ -277,7 +277,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/alone-remix",
-    "art": "https://i1.sndcdn.com/artworks-000201109531-mtar1e-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000201109531-mtar1e-t200x200.jpg",
   },
   {
     "id": 21,
@@ -291,7 +291,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/thunderbolt",
-    "art": "https://f4.bcbits.com/img/a4155316201_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000201109566-uto803-t200x200.jpg",
   },
   {
     "id": 22,
@@ -305,7 +305,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://soundcloud.com/dreamscape_records/similar-outskirts-cyber-talk",
-    "art": "https://f4.bcbits.com/img/a0384878721_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000201109615-ea0k9n-t200x200.jpg",
   },
   {
     "id": 23,
@@ -319,7 +319,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/party-remix",
-    "art": "https://i1.sndcdn.com/artworks-000201109805-heszyu-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000201109805-heszyu-t200x200.jpg",
   },
   {
     "id": 24,
@@ -333,7 +333,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": true,
     "link": "https://soundcloud.com/dreamscape_records/redshift-similar-outskirts-stay-classy",
-    "art": "https://i1.sndcdn.com/artworks-000199509544-gocf3d-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000199509544-gocf3d-t200x200.jpg",
   },
   {
     "id": 25,
@@ -347,7 +347,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts-extra/aishiteru-banzai-remix",
-    "art": "https://i1.sndcdn.com/artworks-000202192302-2jtlvg-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000202192302-2jtlvg-t200x200.jpg",
   },
   {
     "id": 26,
@@ -361,7 +361,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/nanamori-remix",
-    "art": "https://i1.sndcdn.com/artworks-000206361585-o76n59-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000206361585-o76n59-t200x200.jpg",
   },
   {
     "id": 27,
@@ -375,7 +375,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://soundcloud.com/dreamscape_records/starchaser-similar-outskirts-remix",
-    "art": "https://i1.sndcdn.com/artworks-000207914906-wpe4v0-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000207914906-wpe4v0-t200x200.jpg",
   },
   {
     "id": 28,
@@ -389,7 +389,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://soundcloud.com/umbracollective/similar-outskirts-burnout",
-    "art": "https://i1.sndcdn.com/artworks-000211074842-oekjck-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000211074842-oekjck-t200x200.jpg",
   },
   {
     "id": 29,
@@ -403,7 +403,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts-extra/guilty-eyes-fever-remix",
-    "art": "https://i1.sndcdn.com/artworks-000217654503-mqffcv-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000217654503-mqffcv-t200x200.jpg",
   },
   {
     "id": 30,
@@ -417,7 +417,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/no-stopping-us-remix",
-    "art": "https://i1.sndcdn.com/artworks-000224736337-vmtyfc-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000224736337-vmtyfc-t200x200.jpg",
   },
   {
     "id": 31,
@@ -431,7 +431,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://soundcloud.com/dreamscape_records/similar-outskirts-atlantis",
-    "art": "https://f4.bcbits.com/img/a4106883742_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000229273632-z7qd0k-t200x200",
   },
   {
     "id": 32,
@@ -445,7 +445,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://fanlink.tv/SimilarOutskirtsPhantom",
-    "art": "https://i1.sndcdn.com/artworks-000232933218-ffbdjf-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000232933218-ffbdjf-t200x200.jpg",
   },
   {
     "id": 33,
@@ -459,7 +459,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/our-world-remix",
-    "art": "https://i1.sndcdn.com/artworks-000238230107-oo7d27-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000238230107-oo7d27-t200x200.jpg",
   },
   {
     "id": 34,
@@ -473,7 +473,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts-extra/lonely-tuning-remix",
-    "art": "https://i1.sndcdn.com/artworks-000239720248-34b556-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000239720248-34b556-t200x200.jpg",
   },
   {
     "id": 35,
@@ -487,7 +487,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts/wait-for-me-remix",
-    "art": "https://i1.sndcdn.com/artworks-000240844547-41zu9t-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000240844547-41zu9t-t200x200.jpg",
   },
   {
     "id": 36,
@@ -501,7 +501,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://similaroutskirts.fanlink.tv/gadget",
-    "art": "https://f4.bcbits.com/img/a2015114710_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000247059101-t8kq8m-t200x200.jpg",
   },
   {
     "id": 37,
@@ -515,7 +515,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts-extra/daring-remix",
-    "art": "https://i1.sndcdn.com/artworks-000283273985-xul607-t500x500.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000283273985-xul607-t200x200.jpg",
   },
   {
     "id": 38,
@@ -529,13 +529,13 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://similaroutskirts.fanlink.tv/daredevil-ep",
-    "art": "https://f4.bcbits.com/img/a2842958488_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000296488260-kasjmt-t200x200.jpg",
   },
   {
     "id": 39,
     "title": "Space Combat",
     "subtitle": "",
-    "release_date": "2018-2-24",
+    "release_date": "2018-2-23",
     "length": 280,
     "keysig": ["G# / Fm"],
     "tempo": [150],
@@ -543,13 +543,13 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://similaroutskirts.fanlink.tv/daredevil-ep",
-    "art": "https://f4.bcbits.com/img/a2842958488_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000296488260-kasjmt-t200x200.jpg",
   },
   {
     "id": 40,
     "title": "Triumphant",
     "subtitle": "",
-    "release_date": "2018-2-25",
+    "release_date": "2018-2-23",
     "length": 266,
     "keysig": ["G# / Fm"],
     "tempo": [90],
@@ -557,13 +557,13 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://similaroutskirts.fanlink.tv/daredevil-ep",
-    "art": "https://f4.bcbits.com/img/a2842958488_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000296488260-kasjmt-t200x200.jpg",
   },
   {
     "id": 41,
     "title": "Street Race",
     "subtitle": "",
-    "release_date": "2018-2-26",
+    "release_date": "2018-2-23",
     "length": 246,
     "keysig": ["G / Em"],
     "tempo": [160],
@@ -571,7 +571,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://similaroutskirts.fanlink.tv/daredevil-ep",
-    "art": "https://f4.bcbits.com/img/a2842958488_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000296488260-kasjmt-t200x200.jpg",
   },
   {
     "id": 42,
@@ -585,7 +585,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://similaroutskirts.fanlink.tv/amber",
-    "art": "https://f4.bcbits.com/img/a1482471213_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000335226591-f95qoa-t200x200.jpg",
   },
   {
     "id": 43,
@@ -599,7 +599,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts-extra/heroic-advent-remix",
-    "art": "https://i1.sndcdn.com/artworks-000478271904-2j4eds-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000478271904-2j4eds-t200x200.jpg",
   },
   {
     "id": 44,
@@ -613,7 +613,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://similaroutskirts.fanlink.tv/chaos",
-    "art": "https://f4.bcbits.com/img/a2801167212_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000358440750-81b39h-t200x200.jpg",
   },
   {
     "id": 45,
@@ -627,7 +627,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://fanlink.tv/SOHorologyEP",
-    "art": "https://i1.sndcdn.com/artworks-000380151171-3tuzlp-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000380151171-3tuzlp-t200x200.jpg",
   },
   {
     "id": 46,
@@ -641,7 +641,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://fanlink.tv/SOHorologyEP",
-    "art": "https://i1.sndcdn.com/artworks-000383639997-6696qo-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000383639997-6696qo-t200x200.jpg",
   },
   {
     "id": 47,
@@ -655,7 +655,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://fanlink.tv/SOHorologyEP",
-    "art": "https://i1.sndcdn.com/artworks-000383639997-6696qo-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000383639997-6696qo-t200x200.jpg",
   },
   {
     "id": 48,
@@ -669,7 +669,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://fanlink.tv/SOHorologyEP",
-    "art": "https://i1.sndcdn.com/artworks-000383639997-6696qo-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000383639997-6696qo-t200x200.jpg",
   },
   {
     "id": 49,
@@ -683,7 +683,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://similaroutskirts.fanlink.tv/cosmonaut",
-    "art": "https://f4.bcbits.com/img/a1787021285_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000412651857-ltvb57-t200x200.jpg",
   },
   {
     "id": 50,
@@ -697,7 +697,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://similaroutskirts.fanlink.tv/get-high-remix",
-    "art": "https://i1.sndcdn.com/artworks-000428915211-8uhojv-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000428915211-8uhojv-t200x200.jpg",
   },
   {
     "id": 51,
@@ -711,7 +711,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://fanlink.tv/WRmxsSimilarOutskirts",
-    "art": "https://i1.sndcdn.com/artworks-000481813899-zzqpur-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000481813899-zzqpur-t200x200.jpg",
   },
   {
     "id": 52,
@@ -725,7 +725,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://soundcloud.com/similar-outskirts-extra/hey-day-capriccio-remix",
-    "art": "https://i1.sndcdn.com/artworks-000499165281-b3te9p-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000499165281-b3te9p-t200x200.jpg",
   },
   {
     "id": 53,
@@ -739,7 +739,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://fanlink.tv/dandereremixes",
-    "art": "https://i1.sndcdn.com/artworks-000505933815-p39pqa-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000505933815-p39pqa-t200x200.jpg",
   },
   {
     "id": 54,
@@ -753,7 +753,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://distrokid.com/hyperfollow/fokushi/eternal-remixed",
-    "art": "https://i1.sndcdn.com/artworks-000562037337-mrsvh8-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000562037337-mrsvh8-t200x200.jpg",
   },
   {
     "id": 55,
@@ -767,7 +767,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://similaroutskirts.fanlink.tv/abyss-dweller",
-    "art": "https://f4.bcbits.com/img/a2441563579_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000589915874-8jxu2i-t200x200.jpg",
   },
   {
     "id": 56,
@@ -781,7 +781,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://fanlink.tv/ReplayAttack",
-    "art": "https://i1.sndcdn.com/artworks-000600103214-127p9h-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000600103214-127p9h-t200x200.jpg",
   },
   {
     "id": 57,
@@ -795,7 +795,7 @@ export const MusicData = [
     "remix": true,
     "collaboration": false,
     "link": "https://soundcloud.com/disero/au-simout",
-    "art": "https://i1.sndcdn.com/artworks-000604999342-wm4czj-original.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000604999342-wm4czj-t200x200.jpg",
   },
   {
     "id": 58,
@@ -809,7 +809,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://similaroutskirts.fanlink.tv/stargazer",
-    "art": "https://f4.bcbits.com/img/a4226935958_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000615084523-2nfdzm-t200x200.jpg",
   },
   {
     "id": 59,
@@ -823,7 +823,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://similaroutskirts.fanlink.tv/imagination-ep",
-    "art": "https://f4.bcbits.com/img/a0353269693_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000636116902-kos305-t200x200.jpg",
   },
   {
     "id": 60,
@@ -837,7 +837,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://similaroutskirts.fanlink.tv/imagination-ep",
-    "art": "https://f4.bcbits.com/img/a0353269693_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000636116902-kos305-t200x200.jpg",
   },
   {
     "id": 61,
@@ -851,7 +851,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://similaroutskirts.fanlink.tv/imagination-ep",
-    "art": "https://f4.bcbits.com/img/a0353269693_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000636116902-kos305-t200x200.jpg",
   },
   {
     "id": 62,
@@ -865,7 +865,7 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://similaroutskirts.fanlink.tv/imagination-ep",
-    "art": "https://f4.bcbits.com/img/a0353269693_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000636116902-kos305-t200x200.jpg",
   },
   {
     "id": 63,
@@ -879,6 +879,6 @@ export const MusicData = [
     "remix": false,
     "collaboration": false,
     "link": "https://similaroutskirts.fanlink.tv/imagination-ep",
-    "art": "https://f4.bcbits.com/img/a0353269693_10.jpg",
+    "art": "https://i1.sndcdn.com/artworks-000636116902-kos305-t200x200.jpg",
   },
 ]

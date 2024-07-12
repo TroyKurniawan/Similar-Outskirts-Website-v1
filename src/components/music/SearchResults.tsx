@@ -73,6 +73,34 @@ function SearchResults({
     setPageCurrent(1);
   }, [keyword, tempo, releaseYear, keysig]);
 
+  // Sort entry
+  const [sortMethod, setSortMethod] = useState("Newest");
+  function sortEntry(a: EntryProps, b: EntryProps) {
+    if (sortMethod == "Newest") return b.id - a.id;
+    if (sortMethod == "Oldest") return a.id - b.id;
+
+    if (sortMethod == "Longest") return b.length - a.length;
+    if (sortMethod == "Shortest") return a.length - b.length;
+
+    if (sortMethod == "Fastest") return b.tempo[0] - a.tempo[0];
+    if (sortMethod == "Slowest") return a.tempo[0] - b.tempo[0];
+
+    if (sortMethod == "A - Z") {
+      //
+    }
+    if (sortMethod == "Z - A") {
+      //
+    }
+
+    return 0;
+  }
+
+  // Scroll back to top of results when page, sort, or filter changes
+  useEffect(() => {
+    let musicentries = document.getElementById("music-entries");
+    musicentries!.scrollTop = 0;
+  }, [pageCurrent, sortMethod, keyword, tempo, releaseYear, keysig]);
+
   // ===========================================
 
   return (
@@ -88,6 +116,7 @@ function SearchResults({
                    border-l-4 border-r-4 border-slate-800 bg-slate-900
                    place-content-between place-items-center"
       >
+        {/* Result Count */}
         <p className="text-sm text-gray-500">
           <b>RESULTS:</b>
           {entryCount != 0 && (
@@ -98,25 +127,54 @@ function SearchResults({
           )}
           {entryCount == 0 && <p>No results found.</p>}
         </p>
-        {/* Pages */}
-        <div className="flex space-x-2">
-          {Array.from({ length: pageCount }, (_, index) => (
-            <PageButton
-              setPageRange={setPageRange}
-              pageNumber={index + 1}
-              pageCurrent={pageCurrent}
-              setPageCurrent={setPageCurrent}
-            />
-          ))}
+
+        <div className="flex space-x-8">
+          {/* Sort */}
+          <div className="flex place-items-center text-gray-500">
+            <b className="w-28">Sort by:</b>
+            <select
+              id="sort-menu"
+              className="bg-slate-800 w-full pl-2 h-8"
+              defaultValue={"Newest"}
+              onChange={() => {
+                setSortMethod(
+                  (document.getElementById("sort-menu") as HTMLSelectElement)!
+                    .value
+                );
+              }}
+            >
+              <option value="Newest">Newest</option>
+              <option value="Oldest">Oldest</option>
+              <option value="Longest">Longest</option>
+              <option value="Shortest">Shortest</option>
+              <option value="Fastest">Fastest</option>
+              <option value="Slowest">Slowest</option>
+              {/* <option value="A - Z">A - Z</option> */}
+              {/* <option value="Z - A">Z - A</option> */}
+            </select>
+          </div>
+          {/* Pages */}
+          <div className="flex space-x-2">
+            {Array.from({ length: pageCount }, (_, index) => (
+              <PageButton
+                setPageRange={setPageRange}
+                pageNumber={index + 1}
+                pageCurrent={pageCurrent}
+                setPageCurrent={setPageCurrent}
+              />
+            ))}
+          </div>
         </div>
       </div>
 
       {/* Music Entries */}
       <div
+        id="music-entries"
         className="border-t-4 border-l-4 border-r-4 border-slate-800
                    overflow-x-hidden"
       >
         {MusicData.filter(musicFilter)
+          .sort(sortEntry)
           .slice(pageRange[0], pageRange[1])
           .map((entry) => (
             <MusicEntry entry={entry} />

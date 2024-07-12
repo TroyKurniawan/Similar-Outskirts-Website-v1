@@ -82,6 +82,7 @@ function SearchFilter({
           className="bg-slate-800 w-full pl-10 pr-2 h-8"
           placeholder="Search..."
           type="search"
+          autoComplete="off"
           onChange={() =>
             setKeyword(
               (document.getElementById("keyword-input") as HTMLInputElement)!
@@ -116,7 +117,7 @@ function SearchFilter({
             className="bg-slate-800 w-36 h-8 pl-4 text-center"
             placeholder="Lower BPM"
             type="number"
-            defaultValue={90}
+            defaultValue={70}
             onChange={formatTempo}
           />
         </div>

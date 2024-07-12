@@ -49,7 +49,7 @@ function SearchFilter({
   return (
     <div
       className="w-96 h-[44rem] mx-4 p-4
-                  border-4 border-slate-800 bg-slate-900 bg-opacity-50 backdrop-blur
+                  border-4 border-slate-800 bg-slate-900
                   animate-fadeInSlide overflow-y-scroll"
     >
       <div className="flex place-items-center place-content-between">
@@ -62,7 +62,7 @@ function SearchFilter({
 
       <h2 className="font-bold my-2">Title</h2>
 
-      <div className="my-2 flex">
+      <div className="my-2 flex relative">
         <div className="absolute m-1 pl-1 scale-90">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +95,7 @@ function SearchFilter({
 
       <h2 className="font-bold my-2">Tempo</h2>
 
-      <div className="flex place-content-between place-items-center">
+      <div className="flex place-content-between place-items-center relative">
         {/* Lower */}
         <div className="flex">
           <div className="absolute m-1 pl-1 scale-90">
@@ -136,7 +136,7 @@ function SearchFilter({
 
       <h2 className="font-bold my-2">Release Year</h2>
 
-      <div className="flex place-content-between place-items-center">
+      <div className="flex place-content-between place-items-center relative">
         <div className="flex">
           <div className="absolute m-1 pl-1 scale-90">
             <svg
@@ -175,7 +175,7 @@ function SearchFilter({
 
       <h2 className="font-bold my-2">Key</h2>
 
-      <div className="my-2 flex">
+      <div className="my-2 flex relative">
         <div className="absolute m-1 pl-1 scale-90">
           <svg
             xmlns="http://www.w3.org/2000/svg"

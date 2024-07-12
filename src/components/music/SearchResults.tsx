@@ -89,8 +89,14 @@ function SearchResults({
                    place-content-between place-items-center"
       >
         <p className="text-sm text-gray-500">
-          <b>RESULTS:</b> ( {pageRange[0] + 1} -{" "}
-          {Math.min(pageRange[1], entryCount)} of {entryCount} )
+          <b>RESULTS:</b>
+          {entryCount != 0 && (
+            <p>
+              ( {pageRange[0] + 1} - {Math.min(pageRange[1], entryCount)} of{" "}
+              {entryCount} )
+            </p>
+          )}
+          {entryCount == 0 && <p>No results found.</p>}
         </p>
         {/* Pages */}
         <div className="flex space-x-2">

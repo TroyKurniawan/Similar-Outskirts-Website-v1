@@ -21,9 +21,15 @@ type SearchResultsProps = {
   keyword: string;
   tempo: number[];
   releaseYear: number[];
+  keysig: string;
 };
 
-function SearchResults({ keyword, tempo, releaseYear }: SearchResultsProps) {
+function SearchResults({
+  keyword,
+  tempo,
+  releaseYear,
+  keysig,
+}: SearchResultsProps) {
   // Filter music entries
   function musicFilter(entry: EntryProps) {
     // Check keyword
@@ -39,6 +45,14 @@ function SearchResults({ keyword, tempo, releaseYear }: SearchResultsProps) {
     let date_split: string[] = entry.release_date.split("-");
     let year: number = parseInt(date_split[0]);
     if (releaseYear[0] > year || year > releaseYear[1]) return null;
+
+    // Check keysig
+    if (keysig != "-") {
+      for (let i = 0; i < entry.keysig.length; i++) {
+        if (keysig == entry.keysig[i]) break;
+        if (i == entry.keysig.length - 1) return null;
+      }
+    }
 
     // If all pass, render component
     return entry;

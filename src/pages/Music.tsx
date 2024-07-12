@@ -28,6 +28,7 @@ function Music() {
           keyword={keyword}
           tempo={tempo}
           releaseYear={releaseYear}
+          keysig={keysig}
         />
       </div>
     </div>

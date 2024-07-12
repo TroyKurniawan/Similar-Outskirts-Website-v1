@@ -44,6 +44,8 @@ function SearchFilter({
     ]);
   }
 
+  // ====================================
+
   return (
     <div
       className="w-96 h-[44rem] mx-4 p-4
@@ -186,8 +188,18 @@ function SearchFilter({
           </svg>
         </div>
 
-        <select className="bg-slate-800 w-full pl-10 h-8">
-          <option value="">-</option>
+        <select
+          id="keysig-menu"
+          className="bg-slate-800 w-full pl-10 h-8"
+          onChange={() =>
+            setKeysig(
+              (document.getElementById("keysig-menu") as HTMLSelectElement)!
+                .value
+            )
+          }
+          defaultValue={"-"}
+        >
+          <option value="-">-</option>
           <option value="C / Am">C / Am</option>
           <option value="C# / A#m">C# / A#m</option>
           <option value="D / Bm">D / Bm</option>

@@ -81,11 +81,11 @@ function MusicEntry({ entry }: MusicEntryProps) {
                 hover:bg-slate-800 bg-slate-900 shadow-lg
                   flex place-items-center
                   cursor-pointer
-                  hover:border-l-[16px] border-blue-500 transition-all"
+                  hover:border-l-8 border-blue-500 transition-all"
         // onClick={() => setOpen(!open)}
       >
-        <div className="w-10 text-center">
-          <p className="pr-4 text-gray-500 font-black">{entry.id}</p>
+        <div className="w-8 grid place-content-center pr-6">
+          <p className=" text-gray-500 font-black">{entry.id}</p>
         </div>
 
         {/* Main Box */}

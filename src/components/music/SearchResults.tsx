@@ -1,5 +1,7 @@
+import { useEffect, useState } from "react";
 import { MusicData } from "../../musicdata/musicdata";
 import MusicEntry from "./MusicEntry";
+import PageButton from "./PageButton";
 
 type EntryProps = {
   id: number;
@@ -31,6 +33,15 @@ function SearchResults({
   keysig,
   setResultCount,
 }: SearchResultsProps) {
+  // Count number of entries that are rendered
+  let entryCount = MusicData.slice(0).filter(musicFilter).length;
+  setResultCount(entryCount);
+
+  // Pages
+  let pageCount = Math.ceil(entryCount / 20);
+  const [pageRange, setPageRange] = useState([0, 20]);
+  const [pageCurrent, setPageCurrent] = useState(1);
+
   // Filter music entries
   function musicFilter(entry: EntryProps) {
     // Check keyword
@@ -59,26 +70,51 @@ function SearchResults({
     return entry;
   }
 
-  // Count number of entries that are rendered
-  let count = MusicData.slice(0).filter(musicFilter).length;
-  setResultCount(count);
+  // Every time a filter is changed, set the page back to 1
+  useEffect(() => {
+    setPageRange([0, 20]);
+    setPageCurrent(1);
+  }, [keyword, tempo, releaseYear, keysig]);
 
   // ===========================================
 
   return (
     <div
       className="w-[64rem] h-[44rem]
-                  border-4 border-slate-800 bg-slate-900 bg-opacity-50 backdrop-blur
+                 border-4 border-slate-800 bg-slate-900 bg-opacity-50 backdrop-blur
                   grid justify-center place-content-start
-                  overflow-y-scroll overflow-x-hidden
                   animate-fadeInSlide"
     >
-      {MusicData.slice(0)
-        .filter(musicFilter)
-        .reverse()
-        .map((entry) => (
-          <MusicEntry entry={entry} />
-        ))}
+      {/* Header */}
+      <div
+        className="w-[64rem] h-20 flex px-8
+                   border-l-4 border-r-4 border-slate-800 bg-slate-900
+                   place-content-end place-items-center"
+      >
+        {/* Pages */}
+        <div className="flex space-x-2">
+          {Array.from({ length: pageCount }, (_, index) => (
+            <PageButton
+              setPageRange={setPageRange}
+              pageNumber={index + 1}
+              pageCurrent={pageCurrent}
+              setPageCurrent={setPageCurrent}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Music Entries */}
+      <div
+        className="border-t-4 border-l-4 border-r-4 border-slate-800
+                   overflow-x-hidden"
+      >
+        {MusicData.filter(musicFilter)
+          .slice(pageRange[0], pageRange[1])
+          .map((entry) => (
+            <MusicEntry entry={entry} />
+          ))}
+      </div>
     </div>
   );
 }

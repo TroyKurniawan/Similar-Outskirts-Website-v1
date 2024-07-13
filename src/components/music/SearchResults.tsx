@@ -61,7 +61,7 @@ function SearchResults({
     // Check keysig
     if (keysig !== "-") {
       for (let i = 0; i < entry.keysig.length; i++) {
-        if (keysig === entry.keysig[i]) break;
+        if (entry.keysig[i].includes(keysig)) break;
         if (i === entry.keysig.length - 1) return null;
       }
     }

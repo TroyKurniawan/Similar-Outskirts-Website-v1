@@ -23,6 +23,7 @@ type SearchResultsProps = {
   tempo: number[];
   releaseYear: number[];
   keysig: string;
+  label: string;
 };
 
 function SearchResults({
@@ -30,6 +31,7 @@ function SearchResults({
   tempo,
   releaseYear,
   keysig,
+  label,
 }: SearchResultsProps) {
   // Count number of entries that are rendered
   let entryCount = MusicData.slice(0).filter(musicFilter).length;
@@ -48,7 +50,7 @@ function SearchResults({
     // Check tempo
     for (let i = 0; i < entry.tempo.length; i++) {
       if (tempo[0] <= entry.tempo[i] && entry.tempo[i] <= tempo[1]) break;
-      if (i == entry.tempo.length - 1) return null;
+      if (i === entry.tempo.length - 1) return null;
     }
 
     // Check release year
@@ -57,11 +59,16 @@ function SearchResults({
     if (releaseYear[0] > year || year > releaseYear[1]) return null;
 
     // Check keysig
-    if (keysig != "-") {
+    if (keysig !== "-") {
       for (let i = 0; i < entry.keysig.length; i++) {
-        if (keysig == entry.keysig[i]) break;
-        if (i == entry.keysig.length - 1) return null;
+        if (keysig === entry.keysig[i]) break;
+        if (i === entry.keysig.length - 1) return null;
       }
+    }
+
+    // Check label
+    if (label !== "-") {
+      if (label !== entry.label) return null;
     }
 
     // If all pass, render component
@@ -72,24 +79,24 @@ function SearchResults({
   useEffect(() => {
     setPageRange([0, itemsPerPage]);
     setPageCurrent(1);
-  }, [keyword, tempo, releaseYear, keysig]);
+  }, [keyword, tempo, releaseYear, keysig, label, itemsPerPage]);
 
   // Sort entry
   const [sortMethod, setSortMethod] = useState("Newest");
   function sortEntry(a: EntryProps, b: EntryProps) {
-    if (sortMethod == "Newest") return b.id - a.id;
-    if (sortMethod == "Oldest") return a.id - b.id;
+    if (sortMethod === "Newest") return b.id - a.id;
+    if (sortMethod === "Oldest") return a.id - b.id;
 
-    if (sortMethod == "Longest") return b.length - a.length;
-    if (sortMethod == "Shortest") return a.length - b.length;
+    if (sortMethod === "Longest") return b.length - a.length;
+    if (sortMethod === "Shortest") return a.length - b.length;
 
-    if (sortMethod == "Fastest") return b.tempo[0] - a.tempo[0];
-    if (sortMethod == "Slowest") return a.tempo[0] - b.tempo[0];
+    if (sortMethod === "Fastest") return b.tempo[0] - a.tempo[0];
+    if (sortMethod === "Slowest") return a.tempo[0] - b.tempo[0];
 
-    if (sortMethod == "A - Z") {
+    if (sortMethod === "A - Z") {
       //
     }
-    if (sortMethod == "Z - A") {
+    if (sortMethod === "Z - A") {
       //
     }
 
@@ -120,13 +127,13 @@ function SearchResults({
         {/* Result Count */}
         <p className="text-sm text-gray-500">
           <b>RESULTS:</b>
-          {entryCount != 0 && (
+          {entryCount !== 0 && (
             <p>
               ( {pageRange[0] + 1} - {Math.min(pageRange[1], entryCount)} of{" "}
               {entryCount} )
             </p>
           )}
-          {entryCount == 0 && <p>No results found.</p>}
+          {entryCount === 0 && <p>No results found.</p>}
         </p>
 
         <div className="flex space-x-8">

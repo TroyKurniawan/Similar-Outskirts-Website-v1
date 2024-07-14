@@ -113,15 +113,15 @@ function SearchResults({
 
   return (
     <div
-      className="w-[calc(100vw)] md:w-[calc(100vw-200px)] xl:w-[calc(100vw-700px)]
-                                md:h-[calc(100vh-300px)] xl:h-[calc(100vh-200px)]
+      className="w-[calc(100vw)] md:w-[calc(100vw-200px)] lg:w-[calc(100vw-500px)]
+                  h-[calc(100vh-250px)] lg:h-[calc(100vh-200px)]
                   border-4 border-slate-800 bg-slate-900
                   grid justify-center place-content-start
                   animate-fadeInSlide"
     >
       {/* Header */}
       <div
-        className="w-[calc(100vw)] md:w-[calc(100vw-200px)] xl:w-[calc(100vw-700px)]
+        className="w-[calc(100vw)] md:w-[calc(100vw-200px)] lg:w-[calc(100vw-500px)]
                   h-20 flex px-4
                   border-l-4 border-r-4 border-b-4 border-slate-800 bg-slate-900
                   place-content-between place-items-center"

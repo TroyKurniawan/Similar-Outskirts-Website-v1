@@ -50,13 +50,15 @@ function SearchFilter({
 
   return (
     <div
-      className="w-100vw md:w-96
-                  h-20 xl:h-[calc(100vh-200px)]
-                  mx-4 py-4
+      className="w-96
+                  h-[calc(100vh-200px)]
+                  py-4
                   border-4 border-slate-800 bg-slate-900
-                  grid justify-center place-items-center
-                  animate-fadeInSlide overflow-y-auto"
+                  justify-center place-items-center
+                  animate-fadeInSlide overflow-y-auto
+                  grid"
     >
+      {/* Title */}
       <div
         className="flex place-items-center w-[21rem] px-2
                     hover:bg-white hover:bg-opacity-5 hover:cursor-pointer"
@@ -73,6 +75,7 @@ function SearchFilter({
         </svg>
       </div>
 
+      {/* Filters */}
       <div className="w-80">
         <div className="w-full h-[2px] my-4 bg-slate-800" />
 

@@ -7,14 +7,13 @@ function About() {
   return (
     <>
       <div
-        className="w-screen
+        className="w-screen md:h-screen
                   grid place-items-center
                   text-white"
       >
         <div
           className="w-96 md:w-[48rem] lg:w-[64rem] px-4 py-16
-                     h-auto
-                        grid lg:flex place-items-center
+                        grid lg:flex place-items-center 
                         animate-fadeInSlide"
         >
           {/* Paragraph */}

@@ -122,7 +122,7 @@ function SearchResults({
       {/* Header */}
       <div
         className="w-[calc(100vw)] md:w-[calc(100vw-200px)] lg:w-[calc(100vw-500px)]
-                  h-20 flex px-4 text-xs md:text-sm
+                  h-16 md:h-20 flex px-4 text-xs md:text-sm
                   border-l-4 border-r-4 border-b-4 border-slate-800 bg-slate-900
                   place-content-between place-items-center"
       >
@@ -181,8 +181,7 @@ function SearchResults({
       {/* Music Entries */}
       <div
         id="music-entries"
-        className="border-l-4 border-r-4 border-slate-800
-                   overflow-x-hidden"
+        className="border-l-4 border-r-4 border-slate-800 overflow-x-hidden"
       >
         {MusicData.filter(musicFilter)
           .sort(sortEntry)

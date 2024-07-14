@@ -113,20 +113,22 @@ function SearchResults({
 
   return (
     <div
-      className="w-[64rem] h-[44rem]
-                 border-4 border-slate-800 bg-slate-900 bg-opacity-50 backdrop-blur
+      className="w-[calc(100vw)] md:w-[calc(100vw-200px)] xl:w-[calc(100vw-700px)]
+                                md:h-[calc(100vh-300px)] xl:h-[calc(100vh-200px)]
+                  border-4 border-slate-800 bg-slate-900
                   grid justify-center place-content-start
                   animate-fadeInSlide"
     >
       {/* Header */}
       <div
-        className="w-[64rem] h-20 flex px-8
-                   border-l-4 border-r-4 border-slate-800 bg-slate-900
-                   place-content-between place-items-center"
+        className="w-[calc(100vw)] md:w-[calc(100vw-200px)] xl:w-[calc(100vw-700px)]
+                  h-20 flex px-4
+                  border-l-4 border-r-4 border-b-4 border-slate-800 bg-slate-900
+                  place-content-between place-items-center"
       >
         {/* Result Count */}
         <p className="text-sm text-gray-500">
-          <b>RESULTS:</b>
+          <b>Results:</b>
           {entryCount !== 0 && (
             <p>
               ( {pageRange[0] + 1} - {Math.min(pageRange[1], entryCount)} of{" "}
@@ -138,8 +140,8 @@ function SearchResults({
 
         <div className="flex space-x-8">
           {/* Sort */}
-          <div className="flex place-items-center text-gray-500">
-            <b className="w-28">Sort by:</b>
+          <div className="flex place-items-center text-gray-500 space-x-2">
+            <b className="text-sm w-20">Sort by:</b>
             <select
               id="sort-menu"
               className="bg-slate-800 w-full pl-2 h-8"
@@ -179,7 +181,7 @@ function SearchResults({
       {/* Music Entries */}
       <div
         id="music-entries"
-        className="border-t-4 border-l-4 border-r-4 border-slate-800
+        className="border-l-4 border-r-4 border-slate-800
                    overflow-x-hidden"
       >
         {MusicData.filter(musicFilter)

@@ -7,7 +7,6 @@ function NoPage() {
     <div
       className="w-screen h-screen
                     grid content-center
-                    bg-show bg-cover bg-center
                     text-white"
     >
       <div className="grid place-items-center">

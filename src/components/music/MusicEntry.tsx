@@ -70,42 +70,55 @@ function MusicEntry({ entry }: MusicEntryProps) {
 
   // ============================================
 
-  console.log("OPEN)");
-
   return (
     <>
       <a
         href={entry.link}
         target="_blank"
-        className="w-[64rem] h-36 pl-6 pr-8 py-4 z-10
+        className="h-28 2xl:h-36
+                  pl-6 pr-8 py-4 z-10 relative
                 hover:bg-slate-800 bg-slate-900 shadow-lg
                   flex place-items-center
                   cursor-pointer
                   hover:border-l-8 border-blue-500 transition-all"
         // onClick={() => setOpen(!open)}
       >
-        <div className="w-8 grid place-content-center pr-6">
-          <p className=" text-gray-500 font-black">{entry.id}</p>
-        </div>
+        <p className="w-4 2xl:w-8 grid place-content-center pr-6 text-xs 2xl:text-sm text-gray-500 font-black">
+          {entry.id}
+        </p>
 
         {/* Main Box */}
-        <div className="w-4/5 h-36 pr-4 space-x-4 flex place-items-center">
-          <img src={entry.art} className="h-full py-4" />
+        <div className="w-4/5 h-28 2xl:h-36 pr-4 space-x-4 flex place-items-center">
+          <img src={entry.art} className="h-28 2xl:h-36 py-4" />
 
-          <div>
-            <h1 className="text-4xl font-black">{entry.title}</h1>
-            {entry.subtitle && <h2>({entry.subtitle})</h2>}
-            <p className="text-gray-500 text-sm mt-2">{date_string}</p>
+          <div className="">
+            <h1
+              className="text-xl 2xl:text-4xl
+                          font-black"
+            >
+              {entry.title}
+            </h1>
+            {entry.subtitle && (
+              <h2 className="text-sm 2xl:text-base">({entry.subtitle})</h2>
+            )}
+            <p
+              className="text-gray-500 mt-2
+                            text-xs 2xl:text-sm"
+            >
+              {date_string}
+            </p>
           </div>
         </div>
 
         {/* Side Box */}
         <div
-          className="grid justify-start place-content-between w-1/4
-                      text-gray-500 text-sm space-y-1"
+          className="grid justify-start place-content-between w-40
+                      absolute right-0 2xl:right-12
+                      text-gray-500 space-y-1
+                      text-xs 2xl:text-sm"
         >
           {/* Length */}
-          <div className="flex w-16 space-x-2">
+          <div className="flex space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="17px"
@@ -119,7 +132,7 @@ function MusicEntry({ entry }: MusicEntryProps) {
           </div>
 
           {/* Tempo */}
-          <div className="flex w-32 space-x-2">
+          <div className="flex space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="17px"
@@ -133,7 +146,7 @@ function MusicEntry({ entry }: MusicEntryProps) {
           </div>
 
           {/* Key */}
-          <div className="flex w-36 space-x-2">
+          <div className="flex space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="17px"
@@ -147,7 +160,7 @@ function MusicEntry({ entry }: MusicEntryProps) {
           </div>
 
           {/* Label */}
-          <div className="flex w-40 space-x-2">
+          <div className="flex space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="17px"

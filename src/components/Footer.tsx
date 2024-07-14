@@ -20,7 +20,7 @@ let tt_link = "https://www.tiktok.com/@similaroutskirts";
 const Footer = () => {
   return (
     <div
-      className="w-screen h-32 md:h-16 bottom-0 fixed
+      className="w-screen h-32 md:h-16 bottom-0 absolute
                 bg-black
                 grid content-center"
     >

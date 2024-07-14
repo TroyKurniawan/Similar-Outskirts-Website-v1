@@ -14,26 +14,24 @@ function Music() {
   return (
     <div
       className="w-screen h-screen
-                  grid justify-center content-center
-                  bg-show bg-cover bg-center
-                  text-white"
+                  justify-center place-items-center
+                  text-white py-20
+                  grid xl:flex"
     >
-      <div className="flex">
-        <SearchFilter
-          setKeyword={setKeyword}
-          setTempo={setTempo}
-          setReleaseYear={setReleaseYear}
-          setKeysig={setKeysig}
-          setLabel={setLabel}
-        />
-        <SearchResults
-          keyword={keyword}
-          tempo={tempo}
-          releaseYear={releaseYear}
-          keysig={keysig}
-          label={label}
-        />
-      </div>
+      <SearchFilter
+        setKeyword={setKeyword}
+        setTempo={setTempo}
+        setReleaseYear={setReleaseYear}
+        setKeysig={setKeysig}
+        setLabel={setLabel}
+      />
+      <SearchResults
+        keyword={keyword}
+        tempo={tempo}
+        releaseYear={releaseYear}
+        keysig={keysig}
+        label={label}
+      />
     </div>
   );
 }

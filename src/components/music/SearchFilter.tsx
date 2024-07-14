@@ -59,20 +59,8 @@ function SearchFilter({
                   grid"
     >
       {/* Title */}
-      <div
-        className="flex place-items-center w-[21rem] px-2
-                    hover:bg-white hover:bg-opacity-5 hover:cursor-pointer"
-      >
+      <div className="flex place-items-center w-[21rem] px-2">
         <h1 className="text-2xl font-black my-2">Filter by</h1>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="40px"
-          viewBox="0 -960 960 960"
-          width="40px"
-          fill="white"
-        >
-          <path d="M480-360 280-560h400L480-360Z" />
-        </svg>
       </div>
 
       {/* Filters */}

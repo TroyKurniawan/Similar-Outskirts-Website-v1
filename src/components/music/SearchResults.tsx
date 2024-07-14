@@ -122,12 +122,12 @@ function SearchResults({
       {/* Header */}
       <div
         className="w-[calc(100vw)] md:w-[calc(100vw-200px)] lg:w-[calc(100vw-500px)]
-                  h-20 flex px-4
+                  h-20 flex px-4 text-sm
                   border-l-4 border-r-4 border-b-4 border-slate-800 bg-slate-900
                   place-content-between place-items-center"
       >
         {/* Result Count */}
-        <p className="text-sm text-gray-500">
+        <p className="text-gray-500">
           <b>Results:</b>
           {entryCount !== 0 && (
             <p>
@@ -141,7 +141,7 @@ function SearchResults({
         <div className="flex space-x-8">
           {/* Sort */}
           <div className="flex place-items-center text-gray-500 space-x-2">
-            <b className="text-sm w-20">Sort by:</b>
+            <b className="w-20">Sort by:</b>
             <select
               id="sort-menu"
               className="bg-slate-800 w-full pl-2 h-8"

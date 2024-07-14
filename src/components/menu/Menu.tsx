@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import MenuLinks from "./MenuLinks";
-import { ReactComponent as MenuBtn } from "../icons/google-menu.svg";
-import { ReactComponent as CloseBtn } from "../icons/google-close.svg";
+import { ReactComponent as MenuBtn } from "../../icons/google-menu.svg";
+import { ReactComponent as CloseBtn } from "../../icons/google-close.svg";
 
 const Menu = () => {
   const [open, setOpen] = useState(false);
@@ -10,11 +10,11 @@ const Menu = () => {
   function menuOpen() {
     // If open, close
     if (open) {
-      document.getElementById("menu")?.classList.remove("-translate-x-64");
+      document.getElementById("menu")?.classList.add("translate-x-[100vw]");
     }
     // If closed, open
     else {
-      document.getElementById("menu")?.classList.add("-translate-x-64");
+      document.getElementById("menu")?.classList.remove("translate-x-[100vw]");
     }
     setOpen(!open);
   }
@@ -22,38 +22,39 @@ const Menu = () => {
   //   ====================
 
   return (
-    <div className="h-screen absolute">
-      {/* Menu Button SVG */}
-      {!open && (
-        <MenuBtn
-          onClick={() => {
-            menuOpen();
-          }}
-          className="hover:cursor-pointer size-10 m-3 absolute z-50"
-        />
-      )}
-      {/* Close Button SVG */}
-      {open && (
-        <CloseBtn
-          onClick={() => {
-            menuOpen();
-          }}
-          className="hover:cursor-pointer size-10 m-3 absolute z-50"
-        />
-      )}
+    <div className="">
+      <div className="z-50">
+        {/* Menu Button SVG */}
+        {!open && (
+          <MenuBtn
+            className="hover:cursor-pointer size-10 m-3"
+            onClick={menuOpen}
+          />
+        )}
+        {/* Close Button SVG */}
+        {open && (
+          <CloseBtn
+            className="hover:cursor-pointer size-10 m-3"
+            onClick={menuOpen}
+          />
+        )}
+      </div>
 
       {/* Menu */}
-      {/* <div
+      <div
         id="menu"
-        className="h-screen w-[28rem] bg-black grid justify-center content-center backdrop-blur bg-opacity-50 translate-x-20 transition z-40"
+        className="h-screen w-72 transition-all -z-10 absolute top-0 right-0
+                    translate-x-[100vw]
+                    grid justify-center content-center
+                    bg-black backdrop-blur bg-opacity-80 "
       >
-        <div className="w-72 text-4xl font-bold">
+        <div className="w-48 text-4xl font-bold text-right">
           <MenuLinks title="Home" link="/home" />
           <MenuLinks title="About" link="/about" />
           <MenuLinks title="Music" link="/music" />
           <MenuLinks title="Contact" link="/contact" />
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

@@ -17,18 +17,18 @@ function Music() {
     if (
       document
         .getElementById("search-filter")
-        ?.classList.contains("-translate-x-[80vw]")
+        ?.classList.contains("-translate-x-[100vw]")
     ) {
       document
         .getElementById("search-filter")
-        ?.classList.remove("-translate-x-[80vw]");
+        ?.classList.remove("-translate-x-[100vw]");
       document.getElementById("black-bg")?.classList.remove("invisible");
     }
     // If opened, close
     else {
       document
         .getElementById("search-filter")
-        ?.classList.add("-translate-x-[80vw]");
+        ?.classList.add("-translate-x-[100vw]");
       document.getElementById("black-bg")?.classList.add("invisible");
     }
   }
@@ -40,11 +40,11 @@ function Music() {
                   text-white py-20 lg:space-x-4
                   grid lg:flex"
     >
-      {/* Filter Icon */}
+      {/* Filter icon for small devices */}
       <span
-        className="group bg-blue-500 w-full grid justify-center mb-2
+        className="group bg-blue-500 w-full justify-center mb-2
                     hover:bg-white transition-all cursor-pointer
-                    lg:hidden"
+                    lg:hidden flex"
         onClick={openSearchFilter}
       >
         <svg
@@ -62,7 +62,7 @@ function Music() {
       {/* SearchFilter */}
       <div
         id="search-filter"
-        className="absolute lg:static -translate-x-[80vw] lg:-translate-x-0 transition-all z-20"
+        className="absolute lg:static -translate-x-[100vw] lg:-translate-x-0 transition-all z-20"
       >
         <SearchFilter
           setKeyword={setKeyword}
@@ -70,6 +70,7 @@ function Music() {
           setReleaseYear={setReleaseYear}
           setKeysig={setKeysig}
           setLabel={setLabel}
+          openSearchFilter={openSearchFilter}
         />
       </div>
 

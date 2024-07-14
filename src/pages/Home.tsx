@@ -9,9 +9,9 @@ function Home() {
       <img
         id="logo"
         src={textlogo}
-        className="h-32 md:h-72
+        className="h-32 sm:h-40 md:h-56 lg:h-72
                     animate-fadeInSlide transition-all
-                    mb-16"
+                    mb-8"
         alt="similar outskirts text logo"
       />
     </div>

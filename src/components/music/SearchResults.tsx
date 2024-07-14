@@ -37,7 +37,7 @@ function SearchResults({
   let entryCount = MusicData.slice(0).filter(musicFilter).length;
 
   // Pages
-  const [itemsPerPage, setItemsPerPage] = useState(20);
+  const [itemsPerPage, setItemsPerPage] = useState(30);
   let pageCount = Math.ceil(entryCount / itemsPerPage);
   const [pageRange, setPageRange] = useState([0, itemsPerPage]);
   const [pageCurrent, setPageCurrent] = useState(1);
@@ -114,7 +114,7 @@ function SearchResults({
   return (
     <div
       className="w-[calc(100vw)] md:w-[calc(100vw-200px)] lg:w-[calc(100vw-500px)]
-                  h-[calc(100vh-250px)] lg:h-[calc(100vh-200px)]
+                  h-[calc(100vh-200px)]
                   border-4 border-slate-800 bg-slate-900
                   grid justify-center place-content-start
                   animate-fadeInSlide"

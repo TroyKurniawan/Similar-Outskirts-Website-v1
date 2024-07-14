@@ -20,22 +20,18 @@ let tt_link = "https://www.tiktok.com/@similaroutskirts";
 const Footer = () => {
   return (
     <div
-      className="w-screen h-32 md:h-16 bottom-0 absolute
+      className="w-screen h-16 bottom-0 fixed
                 bg-black
                 grid content-center"
     >
-      <div className="grid md:flex justify-center space-y-4 md:space-y-0">
-        <div className="flex justify-center">
-          <SocialMediaButton link={sc_link} icon={sc_icon} />
-          <SocialMediaButton link={yt_link} icon={yt_icon} />
-          <SocialMediaButton link={sp_link} icon={sp_icon} />
-          <SocialMediaButton link={am_link} icon={am_icon} />
-        </div>
-        <div className="flex justify-center">
-          <SocialMediaButton link={tw_link} icon={tw_icon} />
-          <SocialMediaButton link={ig_link} icon={ig_icon} />
-          <SocialMediaButton link={tt_link} icon={tt_icon} />
-        </div>
+      <div className="flex justify-center scale-75 md:scale-100">
+        <SocialMediaButton link={sc_link} icon={sc_icon} />
+        <SocialMediaButton link={yt_link} icon={yt_icon} />
+        <SocialMediaButton link={sp_link} icon={sp_icon} />
+        <SocialMediaButton link={am_link} icon={am_icon} />
+        <SocialMediaButton link={tw_link} icon={tw_icon} />
+        <SocialMediaButton link={ig_link} icon={ig_icon} />
+        <SocialMediaButton link={tt_link} icon={tt_icon} />
       </div>
     </div>
   );

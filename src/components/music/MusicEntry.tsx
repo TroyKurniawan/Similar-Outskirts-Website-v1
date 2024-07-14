@@ -88,7 +88,11 @@ function MusicEntry({ entry }: MusicEntryProps) {
         </p>
 
         {/* Main Box */}
-        <div className="w-4/5 h-28 2xl:h-36 pr-4 space-x-4 flex place-items-center">
+        <div
+          className="w-96 sm:w-4/5 
+                        h-28 2xl:h-36
+                        pr-4 space-x-4 flex place-items-center"
+        >
           <img src={entry.art} className="h-28 2xl:h-36 py-4" />
 
           <div className="">
@@ -112,8 +116,8 @@ function MusicEntry({ entry }: MusicEntryProps) {
 
         {/* Side Box */}
         <div
-          className="grid justify-start place-content-between w-40
-                      absolute right-0 2xl:right-12
+          className="hidden sm:grid justify-start place-content-between w-36
+                      absolute right-0 2xl:right-16
                       text-gray-500 space-y-1
                       text-xs 2xl:text-sm"
         >

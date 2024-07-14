@@ -26,35 +26,35 @@ const Header2 = () => {
   return (
     <>
       <div
-        className="w-screen h-16 p-8 top-0 left-0 fixed
+        className="w-screen h-16 px-4 top-0 fixed
                 flex place-items-center place-content-between
                 transition-all"
         id="header"
       >
         {/* Logo */}
         <a href="/home">
-          <img src={logo} alt="similar outskirts logo" className="w-10" />
+          <img
+            src={logo}
+            alt="similar outskirts logo"
+            className="min-w-10 w-10"
+          />
         </a>
 
         {/* Buttons */}
-        <div className="flex h-16">
+        <div className="h-16 hidden lg:flex">
           <ButtonHeader title="Home" link="/home" />
           <ButtonHeader title="About" link="/about" />
           <ButtonHeader title="Music" link="/music" />
           <ButtonHeader title="Live Sets" link="/live-sets" />
           <ButtonHeader title="Art" link="/art" />
           <ButtonHeader title="Music Usage" link="/music-usage" />
-          <ButtonHeader title="Work Portfolio" link="/work-portfolio" />
           <ButtonHeader title="Contact" link="/contact" />
         </div>
+
+        <div className="inline lg:hidden">
+          <Menu />
+        </div>
       </div>
-
-      {/* <div className="hidden">
-        <Menu />
-      </div> */}
-
-      {/* Extra div for spacing */}
-      {/* <div className="h-16" /> */}
     </>
   );
 };

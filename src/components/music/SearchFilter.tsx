@@ -11,6 +11,7 @@ type SearchFilterProps = {
   setReleaseYear: React.Dispatch<React.SetStateAction<number[]>>;
   setKeysig: React.Dispatch<React.SetStateAction<string>>;
   setLabel: React.Dispatch<React.SetStateAction<string>>;
+  openSearchFilter: () => void;
 };
 
 function SearchFilter({
@@ -19,6 +20,7 @@ function SearchFilter({
   setReleaseYear,
   setKeysig,
   setLabel,
+  openSearchFilter,
 }: SearchFilterProps) {
   const [test, setTest] = useState(true);
 
@@ -59,8 +61,19 @@ function SearchFilter({
                   grid"
     >
       {/* Title */}
-      <div className="flex place-items-center w-[21rem] px-2">
+      <div className="flex place-items-center justify-between w-[21rem] px-2">
         <h1 className="text-2xl font-black my-2">Filter by</h1>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="30px"
+          viewBox="0 -960 960 960"
+          width="30px"
+          fill="#FFFFFF"
+          className="cursor-pointer inline lg:hidden"
+          onClick={openSearchFilter}
+        >
+          <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+        </svg>
       </div>
 
       {/* Filters */}

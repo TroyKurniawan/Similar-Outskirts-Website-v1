@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 html {
-  overscroll-behavior: none;
+  background-color: black;
+  overscroll-behavior-x: none;
 }
 
 body {
@@ -11,7 +12,7 @@ body {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overscroll-behavior: none;
+  overscroll-behavior-x: none;
   overflow: overlay;
 }
 

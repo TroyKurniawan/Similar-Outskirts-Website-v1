@@ -17,18 +17,18 @@ function Music() {
     if (
       document
         .getElementById("search-filter")
-        ?.classList.contains("-translate-x-[100vw]")
+        ?.classList.contains("-translate-x-[calc(100vw+50px)]")
     ) {
       document
         .getElementById("search-filter")
-        ?.classList.remove("-translate-x-[100vw]");
+        ?.classList.remove("-translate-x-[calc(100vw+50px)]");
       document.getElementById("black-bg")?.classList.remove("invisible");
     }
     // If opened, close
     else {
       document
         .getElementById("search-filter")
-        ?.classList.add("-translate-x-[100vw]");
+        ?.classList.add("-translate-x-[calc(100vw+50px)]");
       document.getElementById("black-bg")?.classList.add("invisible");
     }
   }
@@ -62,7 +62,7 @@ function Music() {
       {/* SearchFilter */}
       <div
         id="search-filter"
-        className="absolute lg:static -translate-x-[100vw] lg:-translate-x-0 transition-all z-20"
+        className="absolute lg:static -translate-x-[calc(100vw+50px)] lg:-translate-x-0 transition-all z-20"
       >
         <SearchFilter
           setKeyword={setKeyword}

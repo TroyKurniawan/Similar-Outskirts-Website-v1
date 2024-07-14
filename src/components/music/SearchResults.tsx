@@ -122,7 +122,7 @@ function SearchResults({
       {/* Header */}
       <div
         className="w-[calc(100vw)] md:w-[calc(100vw-200px)] lg:w-[calc(100vw-500px)]
-                  h-20 flex px-4 text-sm
+                  h-20 flex px-4 text-xs md:text-sm
                   border-l-4 border-r-4 border-b-4 border-slate-800 bg-slate-900
                   place-content-between place-items-center"
       >
@@ -138,13 +138,13 @@ function SearchResults({
           {entryCount === 0 && <p>No results found.</p>}
         </p>
 
-        <div className="flex space-x-8">
+        <div className="flex space-x-8 place-items-center">
           {/* Sort */}
           <div className="flex place-items-center text-gray-500 space-x-2">
-            <b className="w-20">Sort by:</b>
+            <b className="w-20 hidden sm:inline">Sort by:</b>
             <select
               id="sort-menu"
-              className="bg-slate-800 w-full pl-2 h-8"
+              className="bg-slate-800 w-full pl-2 h-7"
               defaultValue={"Newest"}
               onChange={() => {
                 setSortMethod(

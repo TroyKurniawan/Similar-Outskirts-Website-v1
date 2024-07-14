@@ -75,25 +75,26 @@ function MusicEntry({ entry }: MusicEntryProps) {
       <a
         href={entry.link}
         target="_blank"
-        className="h-28 2xl:h-36
-                  pl-6 pr-8 py-4 relative
-                hover:bg-slate-800 bg-slate-900 shadow-lg
+        className="h-24 md:h-28 2xl:h-36
+                hover:bg-slate-800 bg-slate-900
                   flex place-items-center
                   cursor-pointer
                   hover:border-l-8 border-blue-500 transition-all"
         // onClick={() => setOpen(!open)}
       >
-        <p className="w-4 2xl:w-8 grid place-content-center pr-6 text-xs 2xl:text-sm text-gray-500 font-black">
+        {/* ID */}
+        <p className="w-12 md:w-14 grid place-content-center text-xs 2xl:text-sm text-gray-500 font-black">
           {entry.id}
         </p>
 
         {/* Main Box */}
         <div
           className="w-96 sm:w-4/5 
-                        h-28 2xl:h-36
+                        h-24 md:h-28 2xl:h-36
                         pr-4 space-x-4 flex place-items-center"
         >
-          <img src={entry.art} className="h-28 2xl:h-36 py-4" />
+          {/* Art */}
+          <img src={entry.art} className="h-24 md:h-28 2xl:h-36 py-4" />
 
           <div className="">
             <h1
@@ -117,7 +118,6 @@ function MusicEntry({ entry }: MusicEntryProps) {
         {/* Side Box */}
         <div
           className="hidden sm:grid justify-start place-content-between w-36
-                      absolute right-0 2xl:right-16
                       text-gray-500 space-y-1
                       text-xs 2xl:text-sm"
         >

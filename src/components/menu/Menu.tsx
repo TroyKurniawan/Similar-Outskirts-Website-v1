@@ -43,12 +43,12 @@ const Menu = () => {
       {/* Menu */}
       <div
         id="menu"
-        className="h-screen w-72 transition-all -z-10 absolute top-0 right-0
+        className="h-screen w-56 transition-all -z-10 absolute top-0 right-0
                     translate-x-[100vw]
                     grid justify-center content-center
-                    bg-black backdrop-blur bg-opacity-80 "
+                    bg-black"
       >
-        <div className="w-48 text-4xl font-bold text-right">
+        <div className="w-36 text-4xl font-bold text-right">
           <MenuLinks title="Home" link="/home" />
           <MenuLinks title="About" link="/about" />
           <MenuLinks title="Music" link="/music" />

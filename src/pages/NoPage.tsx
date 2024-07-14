@@ -9,8 +9,10 @@ function NoPage() {
                     grid content-center
                     text-white"
     >
-      <div className="grid place-items-center">
-        <h1 className="text-7xl font-black">Error: Page Not Found</h1>
+      <div className="grid place-items-center text-center">
+        <h1 className="text-3xl md:text-6xl font-black">
+          Error: Page Not Found
+        </h1>
 
         <ButtonPrimary title="Return Home" link="/home" />
       </div>

@@ -77,7 +77,7 @@ function Music() {
       {/* Black BG For small devices */}
       <span
         id="black-bg"
-        className="invisible h-screen w-screen fixed bg-black bg-opacity-50 z-10 transition-all backdrop-blur-sm"
+        className="invisible h-screen w-screen absolute top-0 bg-black bg-opacity-50 z-10 transition-all backdrop-blur-sm"
         onClick={openSearchFilter}
       />
 

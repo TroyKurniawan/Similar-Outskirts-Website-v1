@@ -11,7 +11,10 @@ function App() {
   return (
     <div className="overflow-x-clip text-white relative grid content-center">
       {/* Background */}
-      <div className="h-screen w-screen bg-show bg-cover bg-no-repeat  bg-fixed fixed -z-10 bg-center" />
+      <div
+        className="h-screen w-screen bg-show fixed -z-10
+                   bg-cover bg-no-repeat bg-fixed bg-[70%] md:bg-center"
+      />
 
       {/* Header */}
       <Header />

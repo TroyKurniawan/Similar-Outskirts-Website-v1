@@ -11,6 +11,9 @@ type SearchFilterProps = {
   setReleaseYear: React.Dispatch<React.SetStateAction<number[]>>;
   setKeysig: React.Dispatch<React.SetStateAction<string>>;
   setLabel: React.Dispatch<React.SetStateAction<string>>;
+  setOriginals: React.Dispatch<React.SetStateAction<boolean>>;
+  setRemixes: React.Dispatch<React.SetStateAction<boolean>>;
+  setCollaborations: React.Dispatch<React.SetStateAction<boolean>>;
   openSearchFilter: () => void;
 };
 
@@ -20,10 +23,11 @@ function SearchFilter({
   setReleaseYear,
   setKeysig,
   setLabel,
+  setOriginals,
+  setRemixes,
+  setCollaborations,
   openSearchFilter,
 }: SearchFilterProps) {
-  const [test, setTest] = useState(true);
-
   // Format tempo to send as state change
   function formatTempo() {
     setTempo([
@@ -56,12 +60,12 @@ function SearchFilter({
                   h-[calc(100vh-200px)]
                   py-4
                   border-4 border-slate-800 bg-slate-900
-                  justify-center place-items-center
+                  place-items-center content-start
                   animate-fadeInSlide overflow-y-auto
                   grid"
     >
       {/* Title */}
-      <div className="flex place-items-center justify-between w-[21rem] px-2">
+      <div className="flex w-[21rem] px-2 place-content-between place-items-center">
         <h1 className="text-2xl font-black my-2">Filter by</h1>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -288,7 +292,7 @@ function SearchFilter({
 
         <div className="">
           <ToggleSwitch
-            callback={setTest}
+            callback={setOriginals}
             title="Originals"
             subtitle=""
             init={true}
@@ -296,7 +300,7 @@ function SearchFilter({
             enable={true}
           />
           <ToggleSwitch
-            callback={setTest}
+            callback={setRemixes}
             title="Remixes"
             subtitle=""
             init={true}
@@ -304,7 +308,7 @@ function SearchFilter({
             enable={true}
           />
           <ToggleSwitch
-            callback={setTest}
+            callback={setCollaborations}
             title="Collaborations"
             subtitle=""
             init={true}

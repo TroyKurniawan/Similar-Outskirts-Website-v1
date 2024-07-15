@@ -24,6 +24,9 @@ type SearchResultsProps = {
   releaseYear: number[];
   keysig: string;
   label: string;
+  originals: boolean;
+  remixes: boolean;
+  collaborations: boolean;
 };
 
 function SearchResults({
@@ -32,6 +35,9 @@ function SearchResults({
   releaseYear,
   keysig,
   label,
+  originals,
+  remixes,
+  collaborations,
 }: SearchResultsProps) {
   // Count number of entries that are rendered
   let entryCount = MusicData.slice(0).filter(musicFilter).length;
@@ -67,9 +73,12 @@ function SearchResults({
     }
 
     // Check label
-    if (label !== "-") {
-      if (label !== entry.label) return null;
-    }
+    if (label !== "-" && label !== entry.label) return null;
+
+    // Check type of release
+    if (!entry.remix && !originals) return null;
+    if (entry.remix && !remixes) return null;
+    if (entry.subtitle.includes("w/") && !collaborations) return null;
 
     // If all pass, render component
     return entry;
@@ -127,7 +136,7 @@ function SearchResults({
                   place-content-between place-items-center"
       >
         {/* Result Count */}
-        <p className="text-gray-500">
+        <div className="text-gray-500">
           <b>Results:</b>
           {entryCount !== 0 && (
             <p>
@@ -136,7 +145,7 @@ function SearchResults({
             </p>
           )}
           {entryCount === 0 && <p>No results found.</p>}
-        </p>
+        </div>
 
         <div className="flex space-x-8 place-items-center">
           {/* Sort */}
@@ -167,6 +176,7 @@ function SearchResults({
           <div className="flex space-x-2">
             {Array.from({ length: pageCount }, (_, index) => (
               <PageButton
+                key={index}
                 setPageRange={setPageRange}
                 pageNumber={index + 1}
                 pageCurrent={pageCurrent}
@@ -187,7 +197,7 @@ function SearchResults({
           .sort(sortEntry)
           .slice(pageRange[0], pageRange[1])
           .map((entry) => (
-            <MusicEntry entry={entry} />
+            <MusicEntry key={entry.id} entry={entry} />
           ))}
       </div>
     </div>

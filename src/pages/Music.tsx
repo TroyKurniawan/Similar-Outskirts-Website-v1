@@ -10,6 +10,9 @@ function Music() {
   const [releaseYear, setReleaseYear] = useState([2014, currentYear]);
   const [keysig, setKeysig] = useState("-");
   const [label, setLabel] = useState("-");
+  const [originals, setOriginals] = useState(true);
+  const [remixes, setRemixes] = useState(true);
+  const [collaborations, setCollaborations] = useState(true);
 
   // Open search filter box on small devices
   function openSearchFilter() {
@@ -70,6 +73,9 @@ function Music() {
           setReleaseYear={setReleaseYear}
           setKeysig={setKeysig}
           setLabel={setLabel}
+          setOriginals={setOriginals}
+          setRemixes={setRemixes}
+          setCollaborations={setCollaborations}
           openSearchFilter={openSearchFilter}
         />
       </div>
@@ -89,6 +95,9 @@ function Music() {
           releaseYear={releaseYear}
           keysig={keysig}
           label={label}
+          originals={originals}
+          remixes={remixes}
+          collaborations={collaborations}
         />
       </div>
     </div>

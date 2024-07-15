@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Music from "./pages/Music";
+import LiveShows from "./pages/LiveShows";
 import NoPage from "./pages/NoPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -23,9 +24,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/Home" element={<Home />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Music" element={<Music />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/music" element={<Music />} />
+          <Route path="/live-shows" element={<LiveShows />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>

@@ -134,7 +134,6 @@ function MusicEntry({ entry }: MusicEntryProps) {
             </svg>
             <p className="ml-1">{length_string}</p>
           </div>
-
           {/* Tempo */}
           <div className="flex space-x-2">
             <svg

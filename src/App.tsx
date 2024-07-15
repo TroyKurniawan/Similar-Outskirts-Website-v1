@@ -17,12 +17,6 @@ function pageBehind() {
 function App() {
   return (
     <div className="overflow-x-clip text-white relative grid content-center">
-      {/* Background */}
-      <div
-        className="h-screen w-screen bg-show fixed -z-50
-                   bg-cover bg-no-repeat bg-[70%] md:bg-center"
-      />
-
       {/* Header */}
       <Header pageBehind={pageBehind} />
 

@@ -4,6 +4,11 @@ import PageTitle from "../components/PageTitle";
 function About() {
   return (
     <>
+      {/* Background */}
+      <div
+        className="h-screen w-screen bg-show3 fixed -z-50
+                   bg-cover bg-no-repeat bg-[70%] md:bg-center"
+      />
       <div className="w-screen grid place-items-start text-white space-y-8">
         <PageTitle title={"About"} />
         <div className="w-screen grid justify-center">

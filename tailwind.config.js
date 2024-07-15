@@ -29,7 +29,10 @@ module.exports = {
 
       backgroundImage:
       {
-        'show': "url('./images/show.jpg')"
+        'show1': "url('./images/show1.jpg')",
+        'show2': "url('./images/show2.jpg')",
+        'show3': "url('./images/show3.jpg')",
+        'imagination': "url('./images/imagination.jpg')",
       },
     },
   },

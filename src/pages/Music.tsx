@@ -43,6 +43,11 @@ function Music() {
                   text-white py-20 lg:space-x-4
                   grid lg:flex"
     >
+      {/* Background */}
+      <div
+        className="h-screen w-screen bg-imagination fixed -z-50
+                   bg-cover bg-no-repeat bg-[70%] md:bg-center"
+      />
       {/* Filter icon for small devices */}
       <span
         className="group bg-blue-500 w-full justify-center mb-2

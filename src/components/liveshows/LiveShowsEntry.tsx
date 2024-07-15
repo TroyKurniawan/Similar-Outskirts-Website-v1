@@ -14,8 +14,11 @@ type LiveShowsEntryProps = {
 function LiveShowsEntry({ event }: LiveShowsEntryProps) {
   return (
     <>
-      {/* 1 */}
-      <div className="flex my-16 space-x-8 place-items-start transition-all">
+      <div
+        className="grid lg:flex w-96 md:w-[48rem] lg:w-[64rem]
+                    justify-center
+                    my-8 lg:space-x-8 place-items-start transition-all"
+      >
         <iframe
           width="560"
           height="315"
@@ -24,22 +27,24 @@ function LiveShowsEntry({ event }: LiveShowsEntryProps) {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
-          className="w-[50%]"
+          className="w-full h-60 lg:h-80 lg:w-[50%]"
         />
         {/* Text Box */}
-        <div className="grid place-content-start w-[50%]">
+        <div className="grid w-96 md:w-[28rem] lg:w-[50%] my-4 lg:my-0">
           {/* Title */}
-          <h2 className="text-6xl font-black mb-2">{event.title}</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-2">
+            {event.title}
+          </h2>
           {/* Date / Location */}
-          <div className="text-xl font-bold text-gray-500 mb-8">
+          <div className="text-base sm:text-lg lg:text-xl font-bold text-gray-500 mb-4 lg:mb-8">
             <p>{event.date}</p>
             <p>
               {event.venue} • {event.city}
             </p>
           </div>
           {/* Description */}
-          <div className="">
-            <p className="">{event.description}</p>
+          <div className="text-sm sm:text-base">
+            <p>{event.description}</p>
             <a
               href={event.host_link}
               target="_blank"

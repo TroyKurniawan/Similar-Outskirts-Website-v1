@@ -20,7 +20,7 @@ function App() {
       {/* Background */}
       <div
         className="h-screen w-screen bg-show fixed -z-50
-                   bg-cover bg-no-repeat bg-fixed bg-[70%] md:bg-center"
+                   bg-cover bg-no-repeat bg-[70%] md:bg-center"
       />
 
       {/* Header */}

@@ -59,7 +59,7 @@ function SearchFilter({
       className="w-96
                   h-[calc(100vh-200px)]
                   py-4
-                  border-4 border-slate-800 bg-slate-900
+                  border-4 border-slate-800 bg-slate-900 backdrop-blur bg-opacity-80
                   place-items-center content-start
                   animate-fadeInSlide overflow-y-auto
                   grid"

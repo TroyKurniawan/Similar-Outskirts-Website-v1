@@ -76,7 +76,7 @@ function MusicEntry({ entry }: MusicEntryProps) {
         href={entry.link}
         target="_blank"
         className="h-24 md:h-28 2xl:h-36
-                hover:bg-slate-800 bg-slate-900
+                hover:bg-slate-800 bg-slate-900 bg-opacity-0
                   flex place-items-center
                   cursor-pointer
                   hover:border-l-8 border-blue-500 transition-all"

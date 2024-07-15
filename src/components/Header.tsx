@@ -2,19 +2,12 @@ import Menu from "./menu/Menu";
 import logo from "../images/so-logo.png";
 import ButtonHeader from "./utilities/ButtonHeader";
 
-const Header2 = () => {
-  document.addEventListener("scroll", bgColor);
+type HeaderProps = {
+  pageBehind: () => void;
+};
 
-  // Find width of current window
-  // let windowLarge: boolean = false;
-  // window.addEventListener(
-  //   "resize",
-  //   function (event) {
-  //     if (window.innerWidth >= 1024) windowLarge = true;
-  //     else windowLarge = false;
-  //   },
-  //   true
-  // );
+function Header({ pageBehind }: HeaderProps) {
+  document.addEventListener("scroll", bgColor);
 
   // If the user is not at the top of the page, add a black background to the header
   function bgColor() {
@@ -46,17 +39,16 @@ const Header2 = () => {
           <ButtonHeader title="About" link="/about" />
           <ButtonHeader title="Music" link="/music" />
           <ButtonHeader title="Live Shows" link="/live-shows" />
-          <ButtonHeader title="Art" link="/art" />
           <ButtonHeader title="Music Usage" link="/music-usage" />
           <ButtonHeader title="Contact" link="/contact" />
         </div>
 
         <div className="inline lg:hidden">
-          <Menu />
+          <Menu pageBehind={pageBehind} />
         </div>
       </div>
     </>
   );
-};
+}
 
-export default Header2;
+export default Header;

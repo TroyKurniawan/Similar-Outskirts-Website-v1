@@ -122,7 +122,7 @@ function SearchResults({
 
   return (
     <div
-      className="w-[calc(100vw)] md:w-[calc(100vw-200px)] lg:w-[calc(100vw-500px)]
+      className="w-[calc(100vw)] md:w-[calc(100vw-200px)] lg:w-[calc(100vw-500px)] max-w-[1024px]
                   h-[calc(100vh-200px)]
                   border-4 border-slate-800 bg-slate-900 backdrop-blur bg-opacity-80
                   grid justify-center place-content-start
@@ -130,7 +130,7 @@ function SearchResults({
     >
       {/* Header */}
       <div
-        className="w-[calc(100vw)] md:w-[calc(100vw-200px)] lg:w-[calc(100vw-500px)]
+        className="w-[calc(100vw)] md:w-[calc(100vw-200px)] lg:w-[calc(100vw-500px)] max-w-[1024px]
                   h-16 md:h-20 flex px-4 text-xs md:text-sm
                   border-l-4 border-r-4 border-b-4 border-slate-800 bg-slate-900 bg-opacity-0
                   place-content-between place-items-center"

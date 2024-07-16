@@ -2,6 +2,7 @@ import React from "react";
 import PageTitle from "../components/PageTitle";
 import ParagraphSection from "../components/ParagraphSection";
 import { MusicUsageData } from "../musicusagedata/musicusagedata";
+import FAQsection from "../components/FAQsection";
 
 function MusicUsage() {
   return (
@@ -52,17 +53,16 @@ function MusicUsage() {
         />
 
         {/* FAQ */}
-        <div
-          className="w-96 px-4 md:w-[36rem] lg:w-[48rem] xl:w-[64rem]
-          text-sm md:text-lg space-y-4 md:space-y-8
-          my-12 text-justify justify-center"
-        >
-          <h2
-            className="text-3xl md:text-5xl
-                font-bold"
+        <div className="w-screen grid justify-center my-12 lg:my-16">
+          <div
+            className="w-96 sm:w-[36rem] md:w-[42rem] lg:w-[60rem]
+                        px-4 grid"
           >
-            FAQ
-          </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-8">FAQ</h2>
+            <FAQsection />
+            <FAQsection />
+            <FAQsection />
+          </div>
         </div>
       </div>
     </>

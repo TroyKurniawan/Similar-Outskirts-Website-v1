@@ -9,7 +9,7 @@ function ParagraphSection({ title, text, code }: ParagraphSectionProps) {
     <div className="w-screen grid justify-center my-12 lg:my-16">
       <div
         className="w-96 sm:w-[36rem] md:w-[42rem] lg:w-[60rem]
-                    px-4 grid animate-fadeInSlide"
+                    px-4 grid"
       >
         {/* Title */}
         {title[0] && (

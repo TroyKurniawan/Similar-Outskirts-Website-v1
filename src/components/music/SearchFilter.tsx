@@ -106,12 +106,13 @@ function SearchFilter({
             placeholder="Search..."
             type="search"
             autoComplete="off"
-            onChange={() =>
-              setKeyword(
-                (document.getElementById("keyword-input") as HTMLInputElement)!
-                  .value
-              )
-            }
+            onChange={() => {
+              let userInput = (document.getElementById(
+                "keyword-input"
+              ) as HTMLInputElement)!.value;
+              userInput = userInput.toLowerCase();
+              setKeyword(userInput);
+            }}
           />
         </div>
 

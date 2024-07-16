@@ -140,7 +140,7 @@ function SearchFilter({
               className="bg-slate-800 w-36 h-8 pl-4 text-center"
               placeholder="Lower BPM"
               type="number"
-              defaultValue={70}
+              defaultValue={60}
               onChange={formatTempo}
             />
           </div>

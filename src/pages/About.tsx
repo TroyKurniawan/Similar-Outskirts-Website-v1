@@ -7,7 +7,7 @@ function About() {
       {/* Background */}
       <div
         className="h-screen w-screen bg-show3 fixed -z-50
-                   bg-cover bg-no-repeat bg-[70%] md:bg-center"
+                   bg-cover bg-no-repeat bg-[30%] md:bg-center"
       />
       <div className="w-screen grid place-items-start text-white space-y-8">
         <PageTitle title={"About"} />
@@ -31,8 +31,8 @@ function About() {
                 Kurniawan was exposed to many facets of music during his
                 childhood, from learning piano and drums to joining school music
                 groups. As such, he naturally grew interested in music
-                production in 2012. With a decade of experience under his belt,
-                he has produced a number of projects including EPs such as
+                production in 2012. With over a decade of experience under his
+                belt, he has produced a number of projects including EPs such as
                 Titans, Headspace and Generations. Moreover, he has released
                 official remixes for artists like Chime, Skybreak, bo en,
                 Tenkitsune, Disero, skygate, and foxi. His works have also been

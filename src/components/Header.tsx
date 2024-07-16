@@ -19,7 +19,7 @@ function Header({ pageBehind }: HeaderProps) {
   return (
     <>
       <div
-        className="w-screen h-16 px-4 top-0 fixed
+        className="w-screen h-16 px-4 top-0 fixed z-50
                 flex place-items-center place-content-between
                 transition-all"
         id="header"

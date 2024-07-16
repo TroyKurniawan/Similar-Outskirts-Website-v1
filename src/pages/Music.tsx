@@ -46,7 +46,7 @@ function Music() {
       {/* Background */}
       <div
         className="h-screen w-screen bg-imagination fixed -z-50
-                   bg-cover bg-no-repeat bg-[70%] md:bg-center"
+                   bg-cover bg-bottom"
       />
       {/* Filter icon for small devices */}
       <span

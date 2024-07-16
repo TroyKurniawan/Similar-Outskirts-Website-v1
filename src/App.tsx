@@ -6,6 +6,7 @@ import LiveShows from "./pages/LiveShows";
 import NoPage from "./pages/NoPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import MusicUsage from "./pages/MusicUsage";
 export const currentYear: number = new Date().getFullYear();
 
 function pageBehind() {
@@ -29,6 +30,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/music" element={<Music />} />
             <Route path="/live-shows" element={<LiveShows />} />
+            <Route path="/music-usage" element={<MusicUsage />} />
             <Route path="*" element={<NoPage />} />
           </Routes>
         </BrowserRouter>

@@ -1,27 +1,34 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-function FAQsection() {
+type FAQsectionProps = {
+  question: string;
+  answer: string;
+};
+
+function FAQsection({ question, answer }: FAQsectionProps) {
   const [open, setOpen] = useState(false);
 
   return (
     <>
       {/* Question */}
       <div
-        className="w-96 sm:w-[36rem] md:w-[42rem] lg:w-[60rem]
-                    h-20
+        className="border-l-8 border-blue-500
                     bg-slate-800 hover:bg-slate-700 cursor-pointer transition-all
-                    px-8 mt-4
+                    py-4 px-8 mt-4
                     flex justify-between place-items-center"
         onClick={() => setOpen(!open)}
       >
-        <h2 className="font-bold text-2xl">Q: Blah Blah Blah...</h2>
+        <div className="w-[90%] flex place-items-center font-bold text-lg md:text-2xl">
+          <p className="mr-6">Q:</p>
+          <h2 className="">{question}</h2>
+        </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="50px"
           viewBox="0 -960 960 960"
           width="50px"
           fill="white"
-          className={open ? "rotate-180 transition-all" : "transition-all"}
+          className={open ? "rotate-180 transition-all" : " transition-all"}
         >
           <path d="M480-360 280-560h400L480-360Z" />
         </svg>
@@ -30,11 +37,10 @@ function FAQsection() {
       {/* Answer */}
       {open && (
         <div
-          className="w-96 sm:w-[36rem] md:w-[42rem] lg:w-[60rem]
-                    bg-slate-900
-                    px-16 py-4 grid"
+          className="bg-slate-900 border-l-8 border-blue-500
+                    px-16 py-4 flex"
         >
-          A: Yup Yup Yup...
+          A: {answer}
         </div>
       )}
     </>

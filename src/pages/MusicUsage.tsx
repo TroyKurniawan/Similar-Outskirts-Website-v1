@@ -1,8 +1,8 @@
-import React from "react";
 import PageTitle from "../components/PageTitle";
 import ParagraphSection from "../components/ParagraphSection";
 import { MusicUsageData } from "../musicusagedata/musicusagedata";
 import FAQsection from "../components/FAQsection";
+import { FAQdata } from "../musicusagedata/FAQdata";
 
 function MusicUsage() {
   return (
@@ -53,17 +53,17 @@ function MusicUsage() {
         />
 
         {/* FAQ */}
-        <div className="w-screen grid justify-center my-12 lg:my-16">
-          <div
-            className="w-96 sm:w-[36rem] md:w-[42rem] lg:w-[60rem]
-                        px-4 grid"
-          >
-            <h2 className="text-3xl md:text-5xl font-bold mb-8">FAQ</h2>
-            <FAQsection />
-            <FAQsection />
-            <FAQsection />
-          </div>
+        <div
+          className="w-96 sm:w-[36rem] md:w-[42rem] lg:w-[60rem]
+                    px-4 grid my-12"
+        >
+          <h2 className="text-3xl md:text-5xl font-bold mb-8">FAQ</h2>
+          {FAQdata.map((faq) => (
+            <FAQsection question={faq.question} answer={faq.answer} />
+          ))}
         </div>
+
+        <div className="h-28" />
       </div>
     </>
   );

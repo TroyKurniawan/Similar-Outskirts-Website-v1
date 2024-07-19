@@ -15,7 +15,7 @@ function LiveShowsEntry({ event }: LiveShowsEntryProps) {
   return (
     <>
       <div
-        className="grid lg:flex w-96 md:w-[48rem] lg:w-[64rem]
+        className="grid lg:flex w-96 sm:w-[36rem] md:w-[42rem] lg:w-[60rem]
                     justify-center
                     my-8 lg:space-x-8 place-items-start transition-all"
       >

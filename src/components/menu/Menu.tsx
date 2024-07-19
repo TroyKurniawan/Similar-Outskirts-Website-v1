@@ -27,8 +27,8 @@ function Menu({ pageBehind }: MenuProps) {
   //   ====================
 
   return (
-    <div className="">
-      <div className="">
+    <div className="z-50">
+      <div className="z-50">
         {/* Menu Button SVG */}
         {!open && (
           <MenuBtn

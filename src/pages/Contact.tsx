@@ -13,20 +13,19 @@ function Contact() {
       <PageTitle title={"Contact"} />
 
       <div
-        className="w-screen flex place-items-center justify-center text-white
-                        space-y-8 space-x-8
-                        mb-32 animate-fadeInSlide"
+        className="w-screen grid place-items-center justify-center text-white mt-16 mb-32
+                        space-y-4 space-x-8 animate-fadeInSlide"
       >
         {/* Text */}
-        <div className="grid w-[36rem] space-y-4">
-          <h1 className="text-4xl font-bold">
-            For all formal inquiries, bookings, and more, contact me using the
-            form:
-          </h1>
-          <h2 className="text-xl text-gray-500">
-            Note: Song collaboration requests are not accepted.
-          </h2>
-        </div>
+        <h1 className="text-3xl font-bold">
+          For all formal inquiries, bookings, and more, contact me using the
+          form:
+        </h1>
+        <h2 className="text-xl text-gray-500">
+          Note: Song collaboration requests are not accepted.
+        </h2>
+
+        <div className="h-4" />
 
         {/* Form */}
         <EmailForm />

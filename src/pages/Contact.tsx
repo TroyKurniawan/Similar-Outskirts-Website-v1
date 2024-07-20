@@ -22,7 +22,7 @@ function Contact() {
             For all formal inquiries, bookings, and more, contact me using the
             form:
           </h1>
-          <h2 className="w-96 text-sm md:text-lg lg:text-xl text-gray-500 text-center">
+          <h2 className="w-96 md:w-[30rem] text-sm md:text-base lg:text-xl text-gray-500 text-center">
             Note: Song collaboration requests are not accepted.
           </h2>
         </div>

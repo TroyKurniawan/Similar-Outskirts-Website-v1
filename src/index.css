@@ -23,19 +23,24 @@ code {
 
 /* Customize the scrollbar */
 ::-webkit-scrollbar {
-  background: rgba(0, 0, 0, 0);
   width: 10px;
+}
+
+/* Customize the track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
 }
 
 /* Customize the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-  background: rgb(88, 88, 88); 
-  scrollbar-width: thin;
+  background: rgb(79, 79, 79);
+  border-radius: 10px;
+
 }
 
 /* Customize the scrollbar thumb on hover*/
 ::-webkit-scrollbar-thumb:hover {
-  background: #787878;
+  background: rgb(127, 127, 127);
 }
 
 :root {

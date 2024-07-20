@@ -38,7 +38,7 @@ function Music() {
 
   return (
     <div
-      className="w-screen h-screen
+      className="w-screen h-screen 
                   justify-center content-center place-items-center
                   text-white py-20 lg:space-x-4
                   grid lg:flex"

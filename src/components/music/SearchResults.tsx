@@ -123,7 +123,7 @@ function SearchResults({
   return (
     <div
       className="w-[calc(100vw)] md:w-[calc(100vw-200px)] lg:w-[calc(100vw-500px)] max-w-[1024px]
-                  h-[calc(100vh-200px)]
+                  h-[calc(100vh-180px)] md:h-[calc(100vh-200px)]
                   border-4 border-slate-800 bg-slate-900 backdrop-blur bg-opacity-80
                   grid justify-center place-content-start
                   animate-fadeInSlide"
@@ -133,10 +133,10 @@ function SearchResults({
         className="w-[calc(100vw)] md:w-[calc(100vw-200px)] lg:w-[calc(100vw-500px)] max-w-[1024px]
                   h-16 md:h-20 flex px-4 text-xs md:text-sm
                   border-l-4 border-r-4 border-b-4 border-slate-800 bg-slate-900 bg-opacity-0
-                  place-content-between place-items-center"
+                  place-content-center sm:place-content-between place-items-center"
       >
         {/* Result Count */}
-        <div className="text-gray-500">
+        <div className="text-gray-500 hidden sm:inline">
           <b>Results:</b>
           {entryCount !== 0 && (
             <p>
@@ -150,10 +150,10 @@ function SearchResults({
         <div className="flex space-x-8 place-items-center">
           {/* Sort */}
           <div className="flex place-items-center text-gray-500 space-x-2">
-            <b className="w-20 hidden sm:inline">Sort by:</b>
+            <b className="w-14">Sort by:</b>
             <select
               id="sort-menu"
-              className="bg-slate-800 w-full pl-2 h-7"
+              className="bg-slate-800 w-24 pl-2 h-7"
               defaultValue={"Newest"}
               onChange={() => {
                 setSortMethod(

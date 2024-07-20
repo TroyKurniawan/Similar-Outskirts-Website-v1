@@ -7,7 +7,7 @@ function Contact() {
     <>
       {/* Background */}
       <div
-        className="h-screen w-screen bg-show2 fixed -z-50
+        className="bg-show5 h-screen w-screen fixed -z-50
                    bg-cover bg-no-repeat bg-[70%] md:bg-bottom"
       />
       <PageTitle title={"Contact"} />

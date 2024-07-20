@@ -33,6 +33,7 @@ module.exports = {
         'show2': "url('./images/show2.jpg')",
         'show3': "url('./images/show3.jpg')",
         'show4': "url('./images/show4.jpg')",
+        'show5': "url('./images/show5.jpg')",
         'imagination': "url('./images/imagination.jpg')",
       },
     },

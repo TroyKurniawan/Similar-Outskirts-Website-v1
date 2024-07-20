@@ -35,16 +35,16 @@ function EmailForm() {
 
   return (
     <form
-      className="group grid w-[48rem]
+      className="grid w-96 md:w-[36rem] lg:w-[48rem]
                 bg-slate-900 border-slate-800 border-4 backdrop-blur bg-opacity-80
-                p-8 space-y-8"
+                p-8 space-y-4 md:space-y-8"
       id="form"
       onSubmit={sendEmail}
     >
       {/* Name / Email */}
-      <div className="flex space-x-8">
+      <div className="grid lg:flex space-y-4 md:space-y-8 lg:space-y-0 lg:space-x-8">
         <div className="grid w-full">
-          <label className="text-2xl font-bold mb-2">Name</label>
+          <label className="text-lg md:text-2xl font-bold mb-2">Name</label>
           <input
             className="p-2 bg-slate-800"
             type="text"
@@ -53,8 +53,8 @@ function EmailForm() {
           />
         </div>
 
-        <div className="grid w-full">
-          <label className="text-2xl font-bold mb-2">Email</label>
+        <div className="grid w-full mt-8 lg:mt-0">
+          <label className="text-lg md:text-2xl font-bold mb-2">Email</label>
           <input
             className="p-2 bg-slate-800"
             type="email"
@@ -66,7 +66,7 @@ function EmailForm() {
 
       {/* Subject */}
       <div className="grid w-full">
-        <label className="text-2xl font-bold mb-2">Subject</label>
+        <label className="text-lg md:text-2xl font-bold mb-2">Subject</label>
         <input
           className="p-2 bg-slate-800"
           type="text"
@@ -77,7 +77,7 @@ function EmailForm() {
 
       {/* Message */}
       <div className="grid">
-        <label className="text-2xl font-bold mb-2">Message</label>
+        <label className="text-lg md:text-2xl font-bold mb-2">Message</label>
         <textarea className="p-2 h-80 bg-slate-800" name="message" required />
       </div>
 
@@ -85,7 +85,7 @@ function EmailForm() {
         {/* Submit */}
         {!progress && (
           <input
-            className="font-black text-2xl
+            className="font-black text-lg md:text-2xl 
                           h-12 w-24 grid place-content-center
                           bg-blue-500 hover:bg-blue-400 cursor-pointer"
             type="submit"

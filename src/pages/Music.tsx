@@ -45,7 +45,7 @@ function Music() {
     >
       {/* Background */}
       <div
-        className="h-screen w-screen bg-imagination fixed -z-50
+        className="h-screen w-screen bg-imagination fixed top-0 -z-50
                    bg-cover bg-bottom"
       />
       {/* Filter icon for small devices */}

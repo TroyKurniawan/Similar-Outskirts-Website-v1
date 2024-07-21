@@ -13,7 +13,11 @@ type EntryProps = {
   tempo: number[];
   label: string;
   remix: boolean;
+  official: boolean;
   collaboration: boolean;
+  anison: boolean;
+  yt_id: boolean;
+  license_info: string;
   link: string;
   art: string;
 };

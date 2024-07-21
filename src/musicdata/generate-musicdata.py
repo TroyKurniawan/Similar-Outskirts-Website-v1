@@ -62,7 +62,8 @@ with open(write_file, 'w', errors='ignore') as w_file:
                         if k != len(split)-1: w_file.write(", ")
                         else: w_file.write("],\n")
 
-                elif fields[j] == "remix" or fields[j] == "collaboration":
+                # Handle boolean values
+                elif fields[j] == "remix" or fields[j] == "collaboration" or fields[j] == "official" or fields[j] == "anison" or fields[j] == "yt_id":
                     w_file.write("    \"" + fields[j] + "\": " + data[j] + ",\n")
 
                 else:

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MusicEntryDetails from "./MusicEntryDetails";
+import ButtonPrimary from "../utilities/ButtonPrimary";
 
 type MusicEntryProps = {
   entry: {
@@ -12,7 +12,11 @@ type MusicEntryProps = {
     tempo: number[];
     label: string;
     remix: boolean;
+    official: boolean;
     collaboration: boolean;
+    anison: boolean;
+    yt_id: boolean;
+    license_info: string;
     link: string;
     art: string;
   };
@@ -64,6 +68,13 @@ function MusicEntry({ entry }: MusicEntryProps) {
     }
   }
 
+  // Format inline style background image
+  // let background_inline = {
+  //   backgroundImage: "url(" + entry.art + ")",
+  //   backgroundRepeat: "no-repeat",
+  //   backgroundPosition: "center",
+  // };
+
   // ============================================
 
   const [open, setOpen] = useState(false);
@@ -73,14 +84,14 @@ function MusicEntry({ entry }: MusicEntryProps) {
   return (
     <>
       <a
-        href={entry.link}
+        // href={entry.link}
         target="_blank"
         className="h-24 md:h-28 2xl:h-36
                 hover:bg-slate-800 bg-slate-900 bg-opacity-0
                   flex place-items-center
                   cursor-pointer
                   hover:border-l-8 border-blue-500 transition-all"
-        // onClick={() => setOpen(!open)}
+        onClick={() => setOpen(!open)}
       >
         {/* ID */}
         <p className="w-12 md:w-14 grid place-content-center text-xs 2xl:text-sm text-gray-500 font-black">
@@ -179,7 +190,44 @@ function MusicEntry({ entry }: MusicEntryProps) {
       </a>
 
       {/* Open Entry */}
-      {/* {open && <MusicEntryDetails />} */}
+      {open && (
+        <div
+          className=" px-10 text-sm 2xl:text-base
+                        bg-slate-950
+                      grid place-items-center sm:flex sm:justify-between"
+          // style={background_inline}
+        >
+          <div className="my-4">
+            <p className="font-bold mb-2">Usage Info:</p>
+            {entry.official && (
+              <div className="">
+                <div className="flex space-x-2">
+                  <p>YouTube Content ID: </p>
+                  <p
+                    className={entry.yt_id ? "text-red-500" : "text-green-500"}
+                  >
+                    {entry.yt_id ? "ON" : "OFF"}
+                  </p>
+                </div>
+                {entry.license_info && (
+                  <p>
+                    License Info:{" "}
+                    <a
+                      href={entry.license_info}
+                      target="_blank"
+                      className="text-blue-500"
+                    >
+                      {entry.label} Licensing
+                    </a>
+                  </p>
+                )}
+              </div>
+            )}
+            {!entry.official && <div>Unofficial Release</div>}
+          </div>
+          <ButtonPrimary title="Download / Stream" link={entry.link} />
+        </div>
+      )}
     </>
   );
 }

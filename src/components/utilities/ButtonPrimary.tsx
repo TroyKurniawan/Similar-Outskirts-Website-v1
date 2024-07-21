@@ -9,14 +9,15 @@ function ButtonPrimary({ title, link }: ButtonProps) {
   return (
     <a
       href={link}
-      className="my-8 py-5 pl-10 pr-8 bg-blue-500
-                hover:scale-95 hover:bg-white hover:text-blue-500 transition
-                flex
-                text-2xl font-bold
+      target="_blank"
+      className="my-4 lg:my-8 py-3 px-4
+                flex place-content-center place-items-center
+                hover:bg-white bg-blue-500 hover:text-blue-500 transition
+                text-base 2xl:text-xl font-bold
                 group"
     >
       {title}
-      <OutArrow className="group-hover:fill-blue-500 size-8 ml-2" />
+      {/* <OutArrow className="group-hover:fill-blue-500 size-7 ml-2" /> */}
     </a>
   );
 }

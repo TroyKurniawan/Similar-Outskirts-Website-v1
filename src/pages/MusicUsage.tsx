@@ -3,10 +3,20 @@ import ParagraphSection from "../components/ParagraphSection";
 import { MusicUsageData } from "../musicusagedata/musicusagedata";
 import FAQsection from "../components/FAQsection";
 import { FAQdata } from "../musicusagedata/FAQdata";
+import { Helmet } from "react-helmet-async";
 
 function MusicUsage() {
   return (
     <>
+      <Helmet>
+        <title>Music Usage</title>
+        <meta
+          name="description"
+          content="How to use music by Similar Outskirts fairly"
+        />
+        <link rel="canonical" href="/music-usage" />
+      </Helmet>
+
       {/* Background */}
       <div
         className="h-screen w-screen bg-show4 fixed -z-50

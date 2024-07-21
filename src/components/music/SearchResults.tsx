@@ -119,7 +119,8 @@ function SearchResults({
 
   // Scroll back to top of results when page, sort, or filter changes
   useEffect(() => {
-    let musicentries = document.getElementById("music-entries");
+    let musicentries: HTMLElement | null =
+      document.getElementById("music-entries");
     musicentries!.scrollTop = 0;
   }, [pageCurrent, sortMethod, keyword, tempo, releaseYear, keysig]);
 

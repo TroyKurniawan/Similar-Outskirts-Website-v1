@@ -2,6 +2,7 @@ import { useState } from "react";
 import SearchFilter from "../components/music/SearchFilter";
 import SearchResults from "../components/music/SearchResults";
 import { currentYear } from "../App";
+import { Helmet } from "react-helmet-async";
 
 function Music() {
   // States
@@ -37,75 +38,86 @@ function Music() {
   }
 
   return (
-    <div
-      className="w-screen h-screen 
+    <>
+      <Helmet>
+        <title>Music</title>
+        <meta
+          name="description"
+          content="The Discography of Similar Outskirts"
+        />
+        <link rel="canonical" href="/music" />
+      </Helmet>
+
+      <div
+        className="w-screen h-screen 
                   justify-center content-center place-items-center
                   text-white py-20 lg:space-x-4
                   grid lg:flex"
-    >
-      {/* Background */}
-      <div
-        className="h-screen w-screen bg-imagination fixed top-0 -z-50
+      >
+        {/* Background */}
+        <div
+          className="h-screen w-screen bg-imagination fixed top-0 -z-50
                    bg-cover bg-bottom"
-      />
-      {/* Filter icon for small devices */}
-      <span
-        className="group bg-blue-500 w-full justify-center mb-2
+        />
+        {/* Filter icon for small devices */}
+        <span
+          className="group bg-blue-500 w-full justify-center mb-2
                     hover:bg-white transition-all cursor-pointer
                     lg:hidden flex"
-        onClick={openSearchFilter}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="40px"
-          width="40px"
-          viewBox="0 -960 960 960"
-          fill="#e8eaed"
-          className=" group-hover:fill-blue-500"
+          onClick={openSearchFilter}
         >
-          <path d="M400-240v-80h160v80H400ZM240-440v-80h480v80H240ZM120-640v-80h720v80H120Z" />
-        </svg>
-      </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="40px"
+            width="40px"
+            viewBox="0 -960 960 960"
+            fill="#e8eaed"
+            className=" group-hover:fill-blue-500"
+          >
+            <path d="M400-240v-80h160v80H400ZM240-440v-80h480v80H240ZM120-640v-80h720v80H120Z" />
+          </svg>
+        </span>
 
-      {/* SearchFilter */}
-      <div
-        id="search-filter"
-        className="absolute lg:static -translate-x-[calc(100vw+50px)] lg:-translate-x-0 transition-all z-20"
-      >
-        <SearchFilter
-          setKeyword={setKeyword}
-          setTempo={setTempo}
-          setReleaseYear={setReleaseYear}
-          setKeysig={setKeysig}
-          setLabel={setLabel}
-          setOriginals={setOriginals}
-          setRemixes={setRemixes}
-          setCollaborations={setCollaborations}
-          openSearchFilter={openSearchFilter}
+        {/* SearchFilter */}
+        <div
+          id="search-filter"
+          className="absolute lg:static -translate-x-[calc(100vw+50px)] lg:-translate-x-0 transition-all z-20"
+        >
+          <SearchFilter
+            setKeyword={setKeyword}
+            setTempo={setTempo}
+            setReleaseYear={setReleaseYear}
+            setKeysig={setKeysig}
+            setLabel={setLabel}
+            setOriginals={setOriginals}
+            setRemixes={setRemixes}
+            setCollaborations={setCollaborations}
+            openSearchFilter={openSearchFilter}
+          />
+        </div>
+
+        {/* Black BG For small devices */}
+        <span
+          id="black-bg"
+          className="invisible h-screen w-screen absolute top-0 bg-black bg-opacity-50 z-10 transition-all backdrop-blur-sm"
+          onClick={openSearchFilter}
         />
-      </div>
 
-      {/* Black BG For small devices */}
-      <span
-        id="black-bg"
-        className="invisible h-screen w-screen absolute top-0 bg-black bg-opacity-50 z-10 transition-all backdrop-blur-sm"
-        onClick={openSearchFilter}
-      />
-
-      {/* Search Results */}
-      <div id="search-results" className="">
-        <SearchResults
-          keyword={keyword}
-          tempo={tempo}
-          releaseYear={releaseYear}
-          keysig={keysig}
-          label={label}
-          originals={originals}
-          remixes={remixes}
-          collaborations={collaborations}
-        />
+        {/* Search Results */}
+        <div id="search-results" className="">
+          <SearchResults
+            keyword={keyword}
+            tempo={tempo}
+            releaseYear={releaseYear}
+            keysig={keysig}
+            label={label}
+            originals={originals}
+            remixes={remixes}
+            collaborations={collaborations}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

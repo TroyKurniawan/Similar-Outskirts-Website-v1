@@ -1,10 +1,20 @@
 import React from "react";
 import EmailForm from "../components/contact/EmailForm";
 import PageTitle from "../components/PageTitle";
+import { Helmet } from "react-helmet-async";
 
 function Contact() {
   return (
     <>
+      <Helmet>
+        <title>Contact</title>
+        <meta
+          name="description"
+          content="Send a message to Similar Outskirts"
+        />
+        <link rel="canonical" href="/contact" />
+      </Helmet>
+
       {/* Background */}
       <div
         className="bg-show5 h-screen w-screen fixed -z-50

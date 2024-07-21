@@ -1,10 +1,20 @@
 import { LiveShowsData } from "../liveshowsdata/liveshowsdata";
 import LiveShowsEntry from "../components/liveshows/LiveShowsEntry";
 import PageTitle from "../components/PageTitle";
+import { Helmet } from "react-helmet-async";
 
 function LiveShows() {
   return (
     <>
+      <Helmet>
+        <title>Live Shows</title>
+        <meta
+          name="description"
+          content="Live show recordings of Similar Outskirts"
+        />
+        <link rel="canonical" href="/live-shows" />
+      </Helmet>
+
       {/* Background */}
       <div
         className="h-screen w-screen bg-show2 fixed -z-50

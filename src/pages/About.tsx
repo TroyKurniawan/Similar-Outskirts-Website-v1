@@ -1,9 +1,19 @@
 import persona from "../images/so-persona.png";
 import PageTitle from "../components/PageTitle";
+import { Helmet } from "react-helmet-async";
 
 function About() {
   return (
     <>
+      <Helmet>
+        <title>About</title>
+        <meta
+          name="description"
+          content="Information about Similar Outskirts"
+        />
+        <link rel="canonical" href="/about" />
+      </Helmet>
+
       {/* Background */}
       <div
         className="h-screen w-screen bg-show3 fixed -z-50

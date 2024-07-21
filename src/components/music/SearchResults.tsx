@@ -72,6 +72,7 @@ function SearchResults({
     if (keysig !== "-") {
       for (let i = 0; i < entry.keysig.length; i++) {
         if (entry.keysig[i].includes(keysig)) break;
+        if (keysig == "Other" && entry.keysig[i].includes("ct")) break;
         if (i === entry.keysig.length - 1) return null;
       }
     }

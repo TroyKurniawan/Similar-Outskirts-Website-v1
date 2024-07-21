@@ -69,11 +69,13 @@ function MusicEntry({ entry }: MusicEntryProps) {
   }
 
   // Format inline style background image
-  // let background_inline = {
-  //   backgroundImage: "url(" + entry.art + ")",
-  //   backgroundRepeat: "no-repeat",
-  //   backgroundPosition: "center",
-  // };
+  let background_inline = {
+    // backgroundImage: "url(" + entry.art + ")",
+    // backgroundRepeat: "no-repeat",
+    // backgroundPosition: "center",
+    // width: "10px",
+    // height: "10px",
+  };
 
   // ============================================
 
@@ -195,7 +197,6 @@ function MusicEntry({ entry }: MusicEntryProps) {
           className=" px-10 text-sm 2xl:text-base
                         bg-slate-950
                       grid place-items-center sm:flex sm:justify-between"
-          // style={background_inline}
         >
           <div className="my-4">
             <p className="font-bold mb-2">Usage Info:</p>
@@ -215,7 +216,7 @@ function MusicEntry({ entry }: MusicEntryProps) {
                     <a
                       href={entry.license_info}
                       target="_blank"
-                      className="text-blue-500"
+                      className="text-blue-500 hover:underline"
                     >
                       {entry.label} Licensing
                     </a>

@@ -239,6 +239,7 @@ function SearchFilter({
             <option value="A / F#m">A / F#m</option>
             <option value="A# / Gm">A# / Gm</option>
             <option value="B / G#m">B / G#m</option>
+            <option value="Other">Other</option>
           </select>
         </div>
 

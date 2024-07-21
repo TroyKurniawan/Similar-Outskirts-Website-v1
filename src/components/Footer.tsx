@@ -24,7 +24,7 @@ const Footer = () => {
                 bg-black
                 grid content-center"
     >
-      <div className="flex justify-center scale-75 md:scale-100">
+      <div className="flex justify-center scale-75 md:scale-90">
         <SocialMediaButton link={sc_link} icon={sc_icon} />
         <SocialMediaButton link={yt_link} icon={yt_icon} />
         <SocialMediaButton link={sp_link} icon={sp_icon} />

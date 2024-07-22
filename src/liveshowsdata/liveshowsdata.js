@@ -19,4 +19,14 @@ export const LiveShowsData = [
         "host": "Anime Expo",
         "host_link": "https://www.anime-expo.org"
     },
+    {
+        "video": "https://www.youtube.com/embed/NUa5sHbwzV0?si=8RJDGp4j6a-dF0CT",
+        "title": "Dual FX",
+        "date": "May 26th, 2023",
+        "venue": "Back Bar",
+        "city": "San José, CA",
+        "description": "A small club show during the Fanime weekend!",
+        "host": "BAR Con",
+        "host_link": "http://boozeanimerock.com"
+    },
 ]

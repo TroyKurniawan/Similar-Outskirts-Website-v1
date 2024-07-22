@@ -8,6 +8,7 @@ module.exports = {
       animation: {
         fadeIn: 'fadeIn 150ms ease-out',
         fadeInSlide: 'fadeInSlide 1s ease-out',
+        popup: 'popup 5s ease-out',
         slideOpen: 'slideOpen 150ms ease-in-out',
       },
 
@@ -19,6 +20,13 @@ module.exports = {
         fadeInSlide: {
           '100%': { opacity: 1, transform: 'translateY(0px)' },
           '25%': { opacity: 0, transform: 'translateY(-20px)' },
+          '0%': { opacity: 0, transform: 'translateY(-20px)' },
+        },
+        popup: {
+          '100%': { opacity: 0, transform: 'translateY(20px)' },
+          '90%': { opacity: 0, transform: 'translateY(20px)' },
+          '80%': { opacity: 1, transform: 'translateY(0px)' },
+          '10%': { opacity: 1, transform: 'translateY(0px)' },
           '0%': { opacity: 0, transform: 'translateY(-20px)' },
         },
         slideOpen: {

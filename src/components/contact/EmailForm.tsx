@@ -1,7 +1,11 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-function EmailForm() {
+type EmailFormProps = {
+  emailNotification: (success: boolean) => void;
+};
+
+function EmailForm({ emailNotification }: EmailFormProps) {
   // Reference to form
   const form = document.getElementById("form");
   const [progress, setProgress] = useState(false);
@@ -23,11 +27,13 @@ function EmailForm() {
       .then(
         () => {
           console.log("SUCCESS!");
+          emailNotification(true);
           (form as HTMLFormElement).reset();
           setProgress(false);
         },
         (error) => {
           console.log("FAILED...", error.text);
+          emailNotification(false);
           setProgress(false);
         }
       );
@@ -87,7 +93,8 @@ function EmailForm() {
           <input
             className="font-black text-lg md:text-2xl 
                           h-12 w-24 grid place-content-center
-                          bg-blue-500 hover:bg-blue-400 cursor-pointer"
+                          bg-blue-500 cursor-pointer
+                          hover:bg-white hover:text-blue-500 transition-all"
             type="submit"
             value="Send"
           />
@@ -107,6 +114,16 @@ function EmailForm() {
           </svg>
         )}
       </div>
+
+      {/* Test buttons */}
+      {/* <div className="space-x-4">
+        <button className="bg-blue-500" onClick={() => emailNotification(true)}>
+          TEST: True
+        </button>
+        <button className="bg-red-500" onClick={() => emailNotification(false)}>
+          TEST: False
+        </button>
+      </div> */}
     </form>
   );
 }

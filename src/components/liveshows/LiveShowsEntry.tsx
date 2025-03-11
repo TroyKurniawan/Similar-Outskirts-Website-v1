@@ -15,7 +15,7 @@ function LiveShowsEntry({ event }: LiveShowsEntryProps) {
   return (
     <>
       <div
-        className="grid lg:flex w-full sm:w-[36rem] md:w-[42rem] lg:w-[60rem]
+        className="grid lg:flex w-[24rem] sm:w-[36rem] md:w-[42rem] lg:w-[60rem]
                     justify-center
                     my-8 lg:space-x-8 place-items-start transition-all"
       >
@@ -27,10 +27,10 @@ function LiveShowsEntry({ event }: LiveShowsEntryProps) {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
-          className="w-full h-60 lg:h-80 lg:w-[50%]"
+          className="h-48 lg:h-80 md:h-72 w-80 lg:w-[50%] md:w-full "
         />
         {/* Text Box */}
-        <div className="grid w-96 md:w-[28rem] lg:w-[50%] my-4 lg:my-0">
+        <div className="grid w-80 md:w-[28rem] lg:w-[50%] my-4 lg:my-0">
           {/* Title */}
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-2">
             {event.title}

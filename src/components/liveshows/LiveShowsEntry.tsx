@@ -1,3 +1,5 @@
+import Divider from "../utilities/Divider";
+
 type LiveShowsEntryProps = {
   event: {
     video: string;
@@ -13,15 +15,15 @@ type LiveShowsEntryProps = {
 
 function LiveShowsEntry({ event }: LiveShowsEntryProps) {
   // Render final white line divider
-  let divider = <span className="w-48 h-[1px] bg-gray-500 my-10" />;
-  if (event.title === "Dual FX") divider = <span />;
+  let end = false;
+  if (event.title === "Dual FX") end = true;
 
   return (
     <div className="grid place-items-center">
       <div
         className="grid lg:flex w-[24rem] sm:w-[36rem] md:w-[42rem] lg:w-[60rem]
                     justify-center
-                    my-8 lg:space-x-8 place-items-start transition-all"
+                    my-4 md:my-8 lg:space-x-8 place-items-start transition-all"
       >
         <iframe
           width="560"
@@ -34,7 +36,7 @@ function LiveShowsEntry({ event }: LiveShowsEntryProps) {
           className="h-48 lg:h-80 md:h-72 w-80 lg:w-[50%] md:w-full "
         />
         {/* Text Box */}
-        <div className="grid w-80 md:w-[28rem] lg:w-[50%] my-4 lg:my-0">
+        <div className="grid w-80 md:w-[28rem] lg:w-[50%] mt-4 lg:mt-0">
           {/* Title */}
           <h2 className="text-3xl sm:text-4xl lg:text-6xl font-black mb-2">
             {event.title}
@@ -67,7 +69,7 @@ function LiveShowsEntry({ event }: LiveShowsEntryProps) {
           </div>
         </div>
       </div>
-      {divider}
+      {!end && <Divider />}
     </div>
   );
 }

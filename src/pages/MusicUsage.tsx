@@ -4,6 +4,7 @@ import { MusicUsageData } from "../musicusagedata/musicusagedata";
 import FAQsection from "../components/FAQsection";
 import { FAQdata } from "../musicusagedata/FAQdata";
 import { Helmet } from "react-helmet-async";
+import Divider from "../components/utilities/Divider";
 
 function MusicUsage() {
   return (
@@ -33,10 +34,7 @@ function MusicUsage() {
           code={MusicUsageData[0].code}
         />
 
-        <span
-          className="w-80 md:w-96
-                        h-[1px] bg-gray-500"
-        />
+        <Divider />
 
         {/* How To Credit */}
         <ParagraphSection
@@ -45,10 +43,7 @@ function MusicUsage() {
           code={MusicUsageData[1].code}
         />
 
-        <span
-          className="w-80 md:w-96 md:my-8
-                        h-[1px] bg-gray-500"
-        />
+        <Divider />
 
         {/* Custom Maps/Charts for Rhythm Games */}
         <ParagraphSection
@@ -57,10 +52,7 @@ function MusicUsage() {
           code={MusicUsageData[2].code}
         />
 
-        <span
-          className="w-80 md:w-96 md:my-8
-                        h-[1px] bg-gray-500"
-        />
+        <Divider />
 
         {/* FAQ */}
         <div

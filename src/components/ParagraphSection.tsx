@@ -6,7 +6,7 @@ type ParagraphSectionProps = {
 
 function ParagraphSection({ title, text, code }: ParagraphSectionProps) {
   return (
-    <div className="w-screen grid justify-center my-12 lg:my-16">
+    <div className="w-screen grid justify-center my-12 lg:my-12">
       <div
         className="w-96 sm:w-[36rem] md:w-[42rem] lg:w-[60rem]
                     px-4 grid"

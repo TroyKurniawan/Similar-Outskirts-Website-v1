@@ -18,13 +18,14 @@ function LandingPage({ id }: LandingPageProps) {
       </Helmet>
 
       {/* Background */}
-      <img src={song.art} className="fixed w-screen blur-xl opacity-70" />
+      <img src={song.art} className="fixed w-screen blur-xl opacity-40 -z-10" />
 
       <div className="w-screen mt-8 grid justify-center place-content-center">
         {/* Main Box */}
         <div
           className="w-80 grid justify-center py-4 my-16
-                        border-4 border-slate-800 bg-slate-900 backdrop-blur bg-opacity-80 space-y-4"
+                        border-4 border-slate-800 bg-slate-900 backdrop-blur bg-opacity-80 space-y-4
+                        animate-fadeInSlide"
         >
           {/* Art */}
           <img className="size-72" src={song.art} />

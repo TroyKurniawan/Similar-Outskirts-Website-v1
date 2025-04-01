@@ -35,7 +35,7 @@ function Link({ site, url }: LinkProps) {
         <div className="w-full flex justify-center">
           <div className="w-full px-6 flex place-items-center justify-between">
             <h1 className="font-bold text-xl">{site}</h1>
-            <img src={icon} className="w-6 " />
+            <img src={icon} className="w-6" />
           </div>
         </div>
       </a>

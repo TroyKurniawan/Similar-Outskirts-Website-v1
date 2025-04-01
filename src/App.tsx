@@ -9,6 +9,8 @@ import Footer from "./components/Footer";
 import MusicUsage from "./pages/MusicUsage";
 import Contact from "./pages/Contact";
 import LandingPage from "./pages/LandingPage";
+import { HelmetProvider } from "react-helmet-async";
+
 export const currentYear: number = new Date().getFullYear();
 
 function pageBehind() {
@@ -20,60 +22,36 @@ function pageBehind() {
 function App() {
   return (
     <>
-      {/* Meta Tags */}
-      <head>
-        <title>Similar Outskirts</title>
-        <meta name="description" content="Music Producer and DJ" />
+      <HelmetProvider>
+        <div className="overflow-x-clip text-white relative grid content-center">
+          {/* Header */}
+          <Header pageBehind={pageBehind} />
 
-        <meta property="og:url" content="https://similaroutskirts.com" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Similar Outskirts" />
-        <meta property="og:description" content="Music Producer and DJ" />
-        <meta
-          property="og:image"
-          content="https://raw.githubusercontent.com/TroyKurniawan/Similar-Outskirts-Website-v1/refs/heads/main/public/thumbnail.jpg"
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="similaroutskirts.com" />
-        <meta property="twitter:url" content="https://similaroutskirts.com" />
-        <meta name="twitter:title" content="Similar Outskirts" />
-        <meta name="twitter:description" content="Music Producer and DJ" />
-        <meta
-          name="twitter:image"
-          content="https://raw.githubusercontent.com/TroyKurniawan/Similar-Outskirts-Website-v1/refs/heads/main/public/thumbnail.jpg"
-        />
-      </head>
+          {/* Page Routing */}
+          <div id="page" className="transition-all">
+            <BrowserRouter>
+              <Routes>
+                <Route index element={<Home />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/music" element={<Music />} />
+                <Route path="/live-shows" element={<LiveShows />} />
+                <Route path="/music-usage" element={<MusicUsage />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<NoPage />} />
 
-      {/* ------------ */}
+                {/* Music Landing Pages */}
+                <Route
+                  path="/music/kokichant"
+                  element={<LandingPage id={124} />}
+                />
+              </Routes>
+            </BrowserRouter>
+          </div>
 
-      <div className="overflow-x-clip text-white relative grid content-center">
-        {/* Header */}
-        <Header pageBehind={pageBehind} />
-
-        {/* Page Routing */}
-        <div id="page" className="transition-all">
-          <BrowserRouter>
-            <Routes>
-              <Route index element={<Home />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/music" element={<Music />} />
-              <Route path="/live-shows" element={<LiveShows />} />
-              <Route path="/music-usage" element={<MusicUsage />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="*" element={<NoPage />} />
-
-              {/* Music Landing Pages */}
-              <Route
-                path="/music/kokichant"
-                element={<LandingPage id={124} />}
-              />
-            </Routes>
-          </BrowserRouter>
+          <Footer />
         </div>
-
-        <Footer />
-      </div>
+      </HelmetProvider>
     </>
   );
 }

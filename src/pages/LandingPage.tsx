@@ -1,5 +1,6 @@
 import { MusicData } from "../musicdata/musicdata";
 import Link from "../components/landingpage/Link";
+import SEO from "../components/utilities/SEO";
 
 type LandingPageProps = {
   id: number;
@@ -8,26 +9,18 @@ type LandingPageProps = {
 function LandingPage({ id }: LandingPageProps) {
   let song = MusicData[id];
   let full_title = song.title + " " + song.subtitle;
-  let full_url = "https://similaroutskirts.com/music/" + song.title;
+  let full_url =
+    "https://similaroutskirts.vercel.app/music/" +
+    song.title.replace(/\s/g, "").toLowerCase();
 
   return (
     <>
-      <head>
-        <title>{full_title}</title>
-        <meta name="description" content="Stream / Download 🎶" />
-
-        <meta property="og:url" content={full_url} />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={full_title} />
-        <meta property="og:description" content="Stream / Download 🎶" />
-        <meta property="og:image" content={song.art} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="similaroutskirts.com" />
-        <meta property="twitter:url" content={full_url} />
-        <meta name="twitter:title" content={full_title} />
-        <meta name="twitter:description" content="Stream / Download 🎶" />
-        <meta name="twitter:image" content={song.art} />
-      </head>
+      <SEO
+        title={full_title}
+        url={full_url}
+        description="Stream / Download 🎶"
+        img={song.art}
+      />
 
       {/* Background */}
       <img

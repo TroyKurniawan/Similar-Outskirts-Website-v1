@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import MusicUsage from "./pages/MusicUsage";
 import Contact from "./pages/Contact";
+import LandingPage from "./pages/LandingPage";
 export const currentYear: number = new Date().getFullYear();
 
 function pageBehind() {
@@ -34,6 +35,9 @@ function App() {
             <Route path="/music-usage" element={<MusicUsage />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NoPage />} />
+
+            {/* Music Landing Pages */}
+            <Route path="/music/kokichant" element={<LandingPage id={124} />} />
           </Routes>
         </BrowserRouter>
       </div>

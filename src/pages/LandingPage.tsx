@@ -7,21 +7,26 @@ type LandingPageProps = {
 
 function LandingPage({ id }: LandingPageProps) {
   let song = MusicData[id];
+  let full_title = song.title + " " + song.subtitle;
+  let full_url = "https://similaroutskirts.com/music/" + song.title;
 
   return (
     <>
       <head>
-        <title>{song.title}</title>
+        <title>{full_title}</title>
+        <meta name="description" content="Stream / Download 🎶" />
 
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={song.title} />
-        <meta property="og:type" content="article" />
+        <meta property="og:url" content={full_url} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={full_title} />
+        <meta property="og:description" content="Stream / Download 🎶" />
         <meta property="og:image" content={song.art} />
-        <meta property="og:url" content={song.link} />
-        <meta property="og:description" content="Out Now! 🎶" />
-
-        {/* X/Twitter Meta Tags */}
-        <meta property="twitter:card" content="Out Now! 🎶" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="similaroutskirts.com" />
+        <meta property="twitter:url" content={full_url} />
+        <meta name="twitter:title" content={full_title} />
+        <meta name="twitter:description" content="Stream / Download 🎶" />
+        <meta name="twitter:image" content={song.art} />
       </head>
 
       {/* Background */}

@@ -1,15 +1,8 @@
 import textlogo from "../images/so-text-logo.png";
-import { Helmet } from "react-helmet-async";
 
 function Home() {
   return (
     <>
-      <Helmet>
-        <title>Home</title>
-        <meta name="description" content="Music Producer and DJ" />
-        <link rel="canonical" href="/home" />
-      </Helmet>
-
       <div className="w-screen h-screen grid place-items-center">
         {/* Background */}
         <div

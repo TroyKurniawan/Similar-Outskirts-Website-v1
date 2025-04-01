@@ -20,7 +20,7 @@ function Home() {
         <img
           id="logo"
           src={textlogo}
-          className="h-32 sm:h-40 md:h-56 lg:h-72
+          className="h-28 sm:h-36 md:h-52 lg:h-64
                     animate-fadeInSlide transition-all
                     mb-8 hover:scale-105"
           alt="similar outskirts text logo"

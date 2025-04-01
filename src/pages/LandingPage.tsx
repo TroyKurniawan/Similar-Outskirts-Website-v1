@@ -1,7 +1,5 @@
 import { MusicData } from "../musicdata/musicdata";
-import { Helmet } from "react-helmet-async";
 import Link from "../components/landingpage/Link";
-import Divider from "../components/utilities/Divider";
 
 type LandingPageProps = {
   id: number;
@@ -12,13 +10,26 @@ function LandingPage({ id }: LandingPageProps) {
 
   return (
     <>
-      <Helmet>
+      <head>
         <title>{song.title}</title>
-        <meta name={song.title} content={song.title} />
-      </Helmet>
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content={song.title} />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content={song.art} />
+        <meta property="og:url" content={song.link} />
+        <meta property="og:description" content="Out Now! 🎶" />
+
+        {/* X/Twitter Meta Tags */}
+        <meta property="twitter:card" content="Out Now! 🎶" />
+      </head>
 
       {/* Background */}
-      <img src={song.art} className="fixed w-screen blur-xl opacity-40 -z-10" />
+      <img
+        src={song.art}
+        className="fixed w-screen blur-xl opacity-40 -z-10"
+        alt={song.title}
+      />
 
       <div className="w-screen mt-8 grid justify-center place-content-center">
         {/* Main Box */}
@@ -28,7 +39,7 @@ function LandingPage({ id }: LandingPageProps) {
                         animate-fadeInSlide"
         >
           {/* Art */}
-          <img className="size-72" src={song.art} />
+          <img className="size-72" src={song.art} alt={song.title} />
 
           {/* Title */}
           <div className="w-full h-16 grid place-items-center">
